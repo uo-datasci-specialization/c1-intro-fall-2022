@@ -1,0 +1,3342 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Assignments</title>
+
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">EDLD 651</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="syllabus.html">Syllabus</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li>
+  <a href="assignments.html">Assignments</a>
+</li>
+<li>
+  <a href="data_list.html">Data</a>
+</li>
+<li>
+  <a href="installs.html">Installs</a>
+</li>
+<li>
+  <a href="https://github.com/uo-datasci-specialization/c1-intro-fall-2022">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Assignments</h1>
+
+</div>
+
+
+<p>As outlined in the <a
+href="https://uo-datasci-specialization.github.io/c1-intro-fall-2021/schedule.html">Weekly
+Schedule</a>, most class meetings will include a homework assignment.
+Supplemental Learning platforms (RStudio Primers, R-Bootcamp, and
+Codecademy) will also be used as additional homework assignments, and
+the course will conclude with a final project. More detail about each is
+provided below. <br> <br></p>
+<div id="hklecuntgw" style="overflow-x:auto;overflow-y:auto;width:100%;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#hklecuntgw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: none;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #000000;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #000000;
+}
+
+#hklecuntgw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hklecuntgw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hklecuntgw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hklecuntgw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#hklecuntgw .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hklecuntgw .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hklecuntgw .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hklecuntgw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hklecuntgw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hklecuntgw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hklecuntgw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hklecuntgw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hklecuntgw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hklecuntgw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hklecuntgw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hklecuntgw .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hklecuntgw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hklecuntgw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hklecuntgw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hklecuntgw .gt_first_summary_row {
+  border-top-style: none;
+  border-top-color: #D3D3D3;
+}
+
+#hklecuntgw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hklecuntgw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hklecuntgw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hklecuntgw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: none;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hklecuntgw .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#hklecuntgw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#hklecuntgw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hklecuntgw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hklecuntgw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hklecuntgw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hklecuntgw .gt_left {
+  text-align: left;
+}
+
+#hklecuntgw .gt_center {
+  text-align: center;
+}
+
+#hklecuntgw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hklecuntgw .gt_font_normal {
+  font-weight: normal;
+}
+
+#hklecuntgw .gt_font_bold {
+  font-weight: bold;
+}
+
+#hklecuntgw .gt_font_italic {
+  font-style: italic;
+}
+
+#hklecuntgw .gt_super {
+  font-size: 65%;
+}
+
+#hklecuntgw .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#hklecuntgw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hklecuntgw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hklecuntgw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hklecuntgw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hklecuntgw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hklecuntgw .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Assignments</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Points</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Homeworks</td>
+<td class="gt_row gt_right">100</td></tr>
+    <tr><td class="gt_row gt_left">Supplementals</td>
+<td class="gt_row gt_right">100</td></tr>
+    <tr><td class="gt_row gt_left">Final Project</td>
+<td class="gt_row gt_right">200</td></tr>
+    <tr><td class="gt_row gt_left">Total</td>
+<td class="gt_row gt_right">400</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+<p><br> <br> <br></p>
+<div id="homework-assignments" class="section level2">
+<h2>Homework Assignments</h2>
+<p>Each homework assignment is worth 10 points, and require your
+<strong>“best honest effort”</strong>, which includes contact me me if
+you need help. Please do not turn in partial work. Instead, please ask
+for help and, if needed, an extension on the deadline. <br> <br></p>
+<div id="fhvjeiudxl" style="overflow-x:auto;overflow-y:auto;width:100%;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#fhvjeiudxl .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: none;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #000000;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #000000;
+}
+
+#fhvjeiudxl .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fhvjeiudxl .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fhvjeiudxl .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fhvjeiudxl .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#fhvjeiudxl .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fhvjeiudxl .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fhvjeiudxl .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fhvjeiudxl .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fhvjeiudxl .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fhvjeiudxl .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fhvjeiudxl .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fhvjeiudxl .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fhvjeiudxl .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#fhvjeiudxl .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#fhvjeiudxl .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fhvjeiudxl .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fhvjeiudxl .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#fhvjeiudxl .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#fhvjeiudxl .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fhvjeiudxl .gt_first_summary_row {
+  border-top-style: none;
+  border-top-color: #D3D3D3;
+}
+
+#fhvjeiudxl .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#fhvjeiudxl .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fhvjeiudxl .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fhvjeiudxl .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: none;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#fhvjeiudxl .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#fhvjeiudxl .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#fhvjeiudxl .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fhvjeiudxl .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fhvjeiudxl .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fhvjeiudxl .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fhvjeiudxl .gt_left {
+  text-align: left;
+}
+
+#fhvjeiudxl .gt_center {
+  text-align: center;
+}
+
+#fhvjeiudxl .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fhvjeiudxl .gt_font_normal {
+  font-weight: normal;
+}
+
+#fhvjeiudxl .gt_font_bold {
+  font-weight: bold;
+}
+
+#fhvjeiudxl .gt_font_italic {
+  font-style: italic;
+}
+
+#fhvjeiudxl .gt_super {
+  font-size: 65%;
+}
+
+#fhvjeiudxl .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#fhvjeiudxl .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#fhvjeiudxl .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#fhvjeiudxl .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#fhvjeiudxl .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#fhvjeiudxl .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#fhvjeiudxl .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Date Assigned</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Date Due</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Assigned</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Key</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Points</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Oct-05</td>
+<td class="gt_row gt_left">Oct-12</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Homework 1</p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Key HW_1</p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-12</td>
+<td class="gt_row gt_left">Oct-19</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Homework 2</p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Key HW_2</p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-12</td>
+<td class="gt_row gt_left">Oct-19</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Homework 3</p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Key HW_3</p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-19</td>
+<td class="gt_row gt_left">Oct-26</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Homework 4</p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Key HW_4</p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-26</td>
+<td class="gt_row gt_left">Nov-02</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Homework 5</p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Key HW_5</p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Nov-02</td>
+<td class="gt_row gt_left">Nov-09</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Homework 6</p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Key HW_6</p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Nov-09</td>
+<td class="gt_row gt_left">Nov-16</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Homework 7</p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Key HW_7</p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Nov-09</td>
+<td class="gt_row gt_left">Nov-16</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Homework 8</p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Key HW_8</p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Nov-16</td>
+<td class="gt_row gt_left">Nov-23</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Homework 9</p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Key HW_9</p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Nov-23</td>
+<td class="gt_row gt_left">Nov-30</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Homework 10</p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p>Key HW_10</p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+<p><br> <br> <br></p>
+</div>
+<div id="supplemental-learning-assignments" class="section level2">
+<h2>Supplemental Learning Assignments</h2>
+<p><br> <br></p>
+<div id="urhtqcemnn" style="overflow-x:auto;overflow-y:auto;width:100%;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#urhtqcemnn .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: none;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #000000;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #000000;
+}
+
+#urhtqcemnn .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#urhtqcemnn .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#urhtqcemnn .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#urhtqcemnn .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#urhtqcemnn .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#urhtqcemnn .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#urhtqcemnn .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#urhtqcemnn .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#urhtqcemnn .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#urhtqcemnn .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#urhtqcemnn .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#urhtqcemnn .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#urhtqcemnn .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#urhtqcemnn .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#urhtqcemnn .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#urhtqcemnn .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#urhtqcemnn .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#urhtqcemnn .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#urhtqcemnn .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#urhtqcemnn .gt_first_summary_row {
+  border-top-style: none;
+  border-top-color: #D3D3D3;
+}
+
+#urhtqcemnn .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#urhtqcemnn .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#urhtqcemnn .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#urhtqcemnn .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: none;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#urhtqcemnn .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#urhtqcemnn .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#urhtqcemnn .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#urhtqcemnn .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#urhtqcemnn .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#urhtqcemnn .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#urhtqcemnn .gt_left {
+  text-align: left;
+}
+
+#urhtqcemnn .gt_center {
+  text-align: center;
+}
+
+#urhtqcemnn .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#urhtqcemnn .gt_font_normal {
+  font-weight: normal;
+}
+
+#urhtqcemnn .gt_font_bold {
+  font-weight: bold;
+}
+
+#urhtqcemnn .gt_font_italic {
+  font-style: italic;
+}
+
+#urhtqcemnn .gt_super {
+  font-size: 65%;
+}
+
+#urhtqcemnn .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#urhtqcemnn .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#urhtqcemnn .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#urhtqcemnn .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#urhtqcemnn .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#urhtqcemnn .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#urhtqcemnn .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Date Assigned</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Date Due</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Assigned</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Screenshot</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Points</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Sep-28</td>
+<td class="gt_row gt_left">Oct-05</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://rstudio.cloud/learn/primers/1.2">RStudio Primer: Programming basics</a></p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><strong>Types &gt; Character or object?</strong></p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Sep-28</td>
+<td class="gt_row gt_left">Oct-05</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://www.codecademy.com/courses/learn-r/lessons/introduction-to-r/exercises/introduction">Codecademy: Introduction to R Syntax</a></p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href=./slides/images/codecademy_complete.png>(example)</a></p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-05</td>
+<td class="gt_row gt_left">Oct-12</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://rstudio.cloud/learn/primers/1.1">RStudio Primer: Data Visualization Basics</a></p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><strong>A code template &gt; A graphing template</strong></p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-05</td>
+<td class="gt_row gt_left">Oct-12</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://r-bootcamp.netlify.app/chapter2">Rbootcamp: Ch 2</a></p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><strong>part 13</strong></p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-05</td>
+<td class="gt_row gt_left">Oct-12</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://www.codecademy.com/courses/learn-r/lessons/intro-visualization-ggplot2-r/exercises/introduction">Codecademy: Introduction to Visualization with R</a></p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href=./slides/images/codecademy_complete.png>(example)</a></p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-12</td>
+<td class="gt_row gt_left">Oct-19</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://rstudio.cloud/learn/primers/2.1">RStudio Primer: Working with Tibbles</a></p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><strong>tidyverse &gt; Quiz</strong></p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-12</td>
+<td class="gt_row gt_left">Oct-19</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://r-bootcamp.netlify.app/chapter3">Rbootcamp: Ch 3</a></p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><strong>part 21</strong></p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-12</td>
+<td class="gt_row gt_left">Oct-19</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://www.codecademy.com/courses/learn-r/lessons/r-aggregates/exercises/introduction">Codecademy: Aggregates in R</a></p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href=./slides/images/codecademy_complete.png>(example)</a></p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-19</td>
+<td class="gt_row gt_left">Oct-26</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://rstudio.cloud/learn/primers/4.3">RStudio Primer: Join Data Sets</a></p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><strong>Mutating Joins &gt; Test your comprehension</strong></p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+    <tr><td class="gt_row gt_left">Oct-19</td>
+<td class="gt_row gt_left">Oct-26</td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href="https://www.codecademy.com/courses/learn-r/lessons/r-multiple-tables/exercises/introduction">Codecademy: Joining Tables in R</a></p>
+</div></td>
+<td class="gt_row gt_left"><div class='gt_from_md'><p><a href=./slides/images/codecademy_complete.png>(example)</a></p>
+</div></td>
+<td class="gt_row gt_right">10</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+<p><br> <br> <br></p>
+</div>
+<div id="final-project" class="section level2">
+<h2>Final Project</h2>
+<div id="gcqexxexmy" style="overflow-x:auto;overflow-y:auto;width:100%;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#gcqexxexmy .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: none;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #000000;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #000000;
+}
+
+#gcqexxexmy .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gcqexxexmy .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gcqexxexmy .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gcqexxexmy .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#gcqexxexmy .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gcqexxexmy .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gcqexxexmy .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gcqexxexmy .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gcqexxexmy .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gcqexxexmy .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gcqexxexmy .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gcqexxexmy .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gcqexxexmy .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#gcqexxexmy .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#gcqexxexmy .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gcqexxexmy .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gcqexxexmy .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#gcqexxexmy .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#gcqexxexmy .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gcqexxexmy .gt_first_summary_row {
+  border-top-style: none;
+  border-top-color: #D3D3D3;
+}
+
+#gcqexxexmy .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#gcqexxexmy .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gcqexxexmy .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gcqexxexmy .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: none;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gcqexxexmy .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gcqexxexmy .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#gcqexxexmy .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gcqexxexmy .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gcqexxexmy .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gcqexxexmy .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gcqexxexmy .gt_left {
+  text-align: left;
+}
+
+#gcqexxexmy .gt_center {
+  text-align: center;
+}
+
+#gcqexxexmy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gcqexxexmy .gt_font_normal {
+  font-weight: normal;
+}
+
+#gcqexxexmy .gt_font_bold {
+  font-weight: bold;
+}
+
+#gcqexxexmy .gt_font_italic {
+  font-style: italic;
+}
+
+#gcqexxexmy .gt_super {
+  font-size: 65%;
+}
+
+#gcqexxexmy .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#gcqexxexmy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#gcqexxexmy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#gcqexxexmy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#gcqexxexmy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#gcqexxexmy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#gcqexxexmy .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Date Assigned</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Date Due</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Assigned</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Points</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Sep-28</td>
+<td class="gt_row gt_left">Oct-26</td>
+<td class="gt_row gt_left">Outline</td>
+<td class="gt_row gt_right">15</td></tr>
+    <tr><td class="gt_row gt_left">Sep-28</td>
+<td class="gt_row gt_left">Nov-23</td>
+<td class="gt_row gt_left">Draft Data Prep Script</td>
+<td class="gt_row gt_right">25</td></tr>
+    <tr><td class="gt_row gt_left">Sep-28</td>
+<td class="gt_row gt_left">Nov-30</td>
+<td class="gt_row gt_left">Peer Review of Script</td>
+<td class="gt_row gt_right">25</td></tr>
+    <tr><td class="gt_row gt_left">Sep-28</td>
+<td class="gt_row gt_left">Nov-30</td>
+<td class="gt_row gt_left">Presentation</td>
+<td class="gt_row gt_right">25</td></tr>
+    <tr><td class="gt_row gt_left">Sep-28</td>
+<td class="gt_row gt_left">Dec-07</td>
+<td class="gt_row gt_left">Paper</td>
+<td class="gt_row gt_right">110</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+<p><br> <br></p>
+<div id="final-project-1" class="section level3">
+<h3>Final Project</h3>
+<p>The final project in this class is a group project, requiring
+students use a “real world” dataset to write, essentially, a miniature
+manuscript, including an introduction (paragraph or two), methods,
+results, and discussion (again, maybe 2-3 paragraphs). Ideally, students
+would work with a dataset that includes variables they are interested in
+using beyond just this class; however, if students do not have access to
+a dataset, the instructor will provide one. Students who do not have
+access to data should plan to meet with the instructor as soon as
+possible so a dataset can be provided. Additionally, the dataset must be
+able to be shared publicly, as the full project will be required to be
+housed on GitHub and be fully reproducible. If making your data publicly
+available is a problem for you, please contact the instructor as soon as
+possible. We can work together to either find a dataset that will work
+for you, or simulate a dataset that is similar to the data you’d like to
+work with in reality (and then all your code should work for the real
+dataset, but you can share the simulated data with your classmates).
+Students are required to work in groups of 2-4 people. The final
+assignment is assigned during the first class, and groups must be
+finalized by the end of Week 2 (at which point students who have not
+self-selected into groups will be randomly assigned).</p>
+<p>I will investigate the commits made by different authors when
+evaluating the final project. If it is obvious that one person did not
+utilize GitHub, and instead added all of their contributions through a
+single or only a few commits, I will dock points from that individual.
+There should be numerous commits by each author, and they should be
+roughly even in terms of contribution activity (which GitHub has metrics
+to track, both in terms of the number of commits as well as the number
+of lines modified). <br> <br></p>
+</div>
+<div id="outline-15-points" class="section level3">
+<h3>Outline (15 points)</h3>
+<p>A basic outline of the final project is due at the end of Week 5. The
+outline should include a description of the data to be used, a
+discussion of what preparatory work will need to be done, and how the
+requirements of the final project will be met. The outline is intended
+to be low-stakes and is primarily designed to be a means for you to
+obtain feedback on the feasibility of the project and areas to consider.
+<br> <br></p>
+</div>
+<div id="draft-data-preparation-script-25-points"
+class="section level3">
+<h3>Draft Data Preparation Script (25 points)</h3>
+<p>At the end of Week 8, you must have a draft of the data preparation
+complete, including moving the data from its raw to tidy form and a
+variety of exploratory data visualizations. Final project must use the
+following functions: <code>pivot_longer()</code>, <code>select()</code>,
+<code>filter()</code>, <code>mutate()</code>,
+<code>pivot_wider()</code>, <code>group_by()</code>, and
+<code>summarize()</code>. <br> <br></p>
+</div>
+<div id="peer-review-of-data-preparation-script-25-points"
+class="section level3">
+<h3>Peer Review of Data Preparation Script (25 points)</h3>
+<p>Following the submission of the data preparation scripts, you will be
+assigned to review your peers’ code. The purpose of this exercise is to
+learn from each other. Programming is an immensely open-ended enterprise
+and there are lots of winding paths that all ultimately end up at the
+same destination. During your peer review, you must note (a) at least
+three areas of strength, (b) at least one thing you learned from
+reviewing their script, and (c) at least one and no more than three
+areas for improvement. Making your code publicly available can feel
+daunting. The purpose of this portion of the final project is to help us
+all learn from each other, not to denigrate. Under no circumstances will
+negative comments be tolerated. Any comments that could be perceived as
+negative, and outside the scope of the code, will result in an immediate
+score of zero. Be constructive in your feedback. Be kind. We are all
+learning. <br> <br></p>
+</div>
+<div id="final-project-presentation-25-points" class="section level3">
+<h3>Final Project Presentation (25 points)</h3>
+<p>Each group will present on their final project during Week 10, which
+is expected to still be in progress. These presentations are expected to
+be informal, and emphasize what learning occurred during the project.
+Specifically, the presentations are to commiserate with each other about
+the failures and challenges experienced along the way, while also
+celebrating the successes. Learning R is a difficult task, and we should
+all take solace knowing that others are struggling along with us. The
+final presentation should be equal parts “journey” and substantive
+findings/conclusions/results. Students are expected to present for
+approximately 10 minutes each (20-40 minutes per group), although the
+time may change depending on the enrollment of the class. <br> <br></p>
+<div id="nfdpnvtodv" style="overflow-x:auto;overflow-y:auto;width:100%;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#nfdpnvtodv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: none;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #000000;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #000000;
+}
+
+#nfdpnvtodv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nfdpnvtodv .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#nfdpnvtodv .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#nfdpnvtodv .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#nfdpnvtodv .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nfdpnvtodv .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#nfdpnvtodv .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#nfdpnvtodv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#nfdpnvtodv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#nfdpnvtodv .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#nfdpnvtodv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nfdpnvtodv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nfdpnvtodv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#nfdpnvtodv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#nfdpnvtodv .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#nfdpnvtodv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nfdpnvtodv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#nfdpnvtodv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#nfdpnvtodv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nfdpnvtodv .gt_first_summary_row {
+  border-top-style: none;
+  border-top-color: #D3D3D3;
+}
+
+#nfdpnvtodv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#nfdpnvtodv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nfdpnvtodv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nfdpnvtodv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: none;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#nfdpnvtodv .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#nfdpnvtodv .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#nfdpnvtodv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nfdpnvtodv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nfdpnvtodv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nfdpnvtodv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nfdpnvtodv .gt_left {
+  text-align: left;
+}
+
+#nfdpnvtodv .gt_center {
+  text-align: center;
+}
+
+#nfdpnvtodv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#nfdpnvtodv .gt_font_normal {
+  font-weight: normal;
+}
+
+#nfdpnvtodv .gt_font_bold {
+  font-weight: bold;
+}
+
+#nfdpnvtodv .gt_font_italic {
+  font-style: italic;
+}
+
+#nfdpnvtodv .gt_super {
+  font-size: 65%;
+}
+
+#nfdpnvtodv .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#nfdpnvtodv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#nfdpnvtodv .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#nfdpnvtodv .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#nfdpnvtodv .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#nfdpnvtodv .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#nfdpnvtodv .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <td colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border" style><strong>Presentation Rubric</strong></td>
+    </tr>
+    
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Criteria</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Points possible</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Challenges faced along the way</td>
+<td class="gt_row gt_right">5</td></tr>
+    <tr><td class="gt_row gt_left">Victories and things to celebrate</td>
+<td class="gt_row gt_right">5</td></tr>
+    <tr><td class="gt_row gt_left">Challenges you are still facing</td>
+<td class="gt_row gt_right">5</td></tr>
+    <tr><td class="gt_row gt_left">Substantive findings/interpretations</td>
+<td class="gt_row gt_right">5</td></tr>
+    <tr><td class="gt_row gt_left">Next R hurdle to tackle</td>
+<td class="gt_row gt_right">5</td></tr>
+    <tr><td class="gt_row gt_left" style="font-weight: bold;">Total</td>
+<td class="gt_row gt_right" style="font-weight: bold;">25</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+<p><br> <br></p>
+</div>
+<div id="final-paper-110" class="section level3">
+<h3>Final Paper (110)</h3>
+<p>The purpose of the final project is to allow students an opportunity
+to demonstrate all the skills they have learned throughout the course.
+The final project must (a) be a reproducible and dynamic R Markdown
+document with references to the extant literature; (b) be housed on
+GitHub, with contributions from all authors obvious; (c) demonstrate
+moving data from its raw “messy” format to a tidy data format through
+the R Markdown file, but not in the final document; (d) include at least
+two exploratory data visualizations, and (e) include at least summary
+statistics of the data in tables, although fitted models of any sort are
+an added bonus (not literally, there are not extra points for fitting a
+model). The points for the final project are broken down as follows.
+<br> <br></p>
+<div id="sjqizuggmy" style="overflow-x:auto;overflow-y:auto;width:100%;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#sjqizuggmy .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: none;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #000000;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #000000;
+}
+
+#sjqizuggmy .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sjqizuggmy .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#sjqizuggmy .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#sjqizuggmy .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#sjqizuggmy .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sjqizuggmy .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#sjqizuggmy .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #56B4E9;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#sjqizuggmy .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#sjqizuggmy .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#sjqizuggmy .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#sjqizuggmy .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#sjqizuggmy .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#sjqizuggmy .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#sjqizuggmy .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#sjqizuggmy .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#sjqizuggmy .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sjqizuggmy .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#sjqizuggmy .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#sjqizuggmy .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sjqizuggmy .gt_first_summary_row {
+  border-top-style: none;
+  border-top-color: #D3D3D3;
+}
+
+#sjqizuggmy .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#sjqizuggmy .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sjqizuggmy .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sjqizuggmy .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: none;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#sjqizuggmy .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#sjqizuggmy .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#sjqizuggmy .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sjqizuggmy .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sjqizuggmy .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sjqizuggmy .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sjqizuggmy .gt_left {
+  text-align: left;
+}
+
+#sjqizuggmy .gt_center {
+  text-align: center;
+}
+
+#sjqizuggmy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#sjqizuggmy .gt_font_normal {
+  font-weight: normal;
+}
+
+#sjqizuggmy .gt_font_bold {
+  font-weight: bold;
+}
+
+#sjqizuggmy .gt_font_italic {
+  font-style: italic;
+}
+
+#sjqizuggmy .gt_super {
+  font-size: 65%;
+}
+
+#sjqizuggmy .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#sjqizuggmy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#sjqizuggmy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#sjqizuggmy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#sjqizuggmy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#sjqizuggmy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#sjqizuggmy .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <td colspan="2" class="gt_heading gt_title gt_font_normal gt_bottom_border" style><strong>Final Paper Rubric</strong></td>
+    </tr>
+    
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Criteria</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Points Possible</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left" style="font-weight: bold;"><div class='gt_from_md'><p>Writing</p>
+</div></td>
+<td class="gt_row gt_left"></td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p>Abstract</p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p>Introduction</p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p>Methods</p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p>Results</p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p>Discussion</p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p>References</p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left" style="font-weight: bold;"><div class='gt_from_md'><p>Code</p>
+</div></td>
+<td class="gt_row gt_left"></td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p>Document is fully reproducible</p>
+</div></td>
+<td class="gt_row gt_left">25</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p>Demonstrate use of inline code</p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p>At least two data visualizations</p>
+</div></td>
+<td class="gt_row gt_left">10 (5 pts each)</td></tr>
+    <tr><td class="gt_row gt_left" style="font-weight: bold;"><div class='gt_from_md'><p>Demonstrate tidying messy data using:</p>
+</div></td>
+<td class="gt_row gt_left"></td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p><code>pivot_longer()</code></p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p><code>mutate()</code></p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p><code>select()` and `filter()</code></p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p><code>pivot_wider()</code></p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p>At least one table of descriptive statistics</p>
+</div></td>
+<td class="gt_row gt_left">10</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p><code>group_by()</code></p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left"><div class='gt_from_md'><p><code>summarize()</code></p>
+</div></td>
+<td class="gt_row gt_left">5</td></tr>
+    <tr><td class="gt_row gt_left" style="font-weight: bold;"><div class='gt_from_md'><p>Total</p>
+</div></td>
+<td class="gt_row gt_left">110</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
