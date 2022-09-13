@@ -12,7 +12,13 @@ knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE)
 ```
 
-Please complete the following **five** items before our first class. 
+Please complete the following **five** items before our first class. Instructions for each are below.
+
+(1) Install `R`
+(2) Install RStudio
+(3) Register a GitHub account
+(4) Install Git
+(5) Install GitKraken
 
 <br>
 <br>

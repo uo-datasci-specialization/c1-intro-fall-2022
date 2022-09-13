@@ -25,13 +25,17 @@ library(gt)
 <br>
 <br>
 
-- **Term:** Fall 2021
+- **Term:** Fall 2022
 - **Time:** Wed, 1:00-3:50pm
-- **Classroom:** HEDCO 146
+- **Classroom:** Lokey 119
 - **Instructor:** Joe Nese, PhD
   + *email*: jnese@uoregon.edu (preferred contact method)
   + *office hours*: By appointment
   + *pronouns*: he/him/his
+- **GE:** Errol Kaylor
+  + *email*: errolk@uoregon.edu (preferred contact method)
+  + *office hours*: By appointment
+
 <br>
 <br>
 <br>
@@ -92,7 +96,7 @@ All required course readings are freely available online or will be provided by 
 # Resources 
 
 ## Supplemental Learning
-The best way to learn to use R is to be exposed to and use R, so in this course we will use some supplemental content developed outside this course. Specifically, we will be using some RStudio Primers, and R-Bootcamp.
+The best way to learn to use `R` is to be exposed to and use R, so in this course we will use some supplemental content developed outside this course. Specifically, we will be using some RStudio Primers, and R-Bootcamp.
 <br>
 <br>
 
@@ -162,8 +166,8 @@ The [RStudio community](https://community.rstudio.com/) is similar to stackoverf
 <br>
 <br>
 
-### R Users Groups
-R Users Groups are local organizations dedicated to “bringing together area practitioners of R to exchange knowledge and inspire new users.” The [Eugene R Users Group](https://www.meetup.com/meetup-group-cwPiAlnB/), unfortunately, has been largely dormant. The R user group for Portland – [pdxrlang](https://pdxrlang.com/) – has monthly meet-ups, a slack, and other activities.
+### `R` Users Groups
+`R` Users Groups are local organizations dedicated to “bringing together area practitioners of R to exchange knowledge and inspire new users.” The [Eugene R Users Group](https://www.meetup.com/meetup-group-cwPiAlnB/), unfortunately, has been largely dormant. The `R` user group for Portland – [pdxrlang](https://pdxrlang.com/) – has monthly meet-ups, a slack, and other activities.
 <br>
 <br>
 <br>
