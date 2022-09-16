@@ -33,8 +33,9 @@ library(gt)
   + *office hours*: By appointment
   + *pronouns*: he/him/his
 - **GE:** Errol Kaylor
-  + *email*: errolk@uoregon.edu (preferred contact method)
+  + *email*: errolk@uoregon.edu or on Discored at Underwaterbasket#7151
   + *office hours*: By appointment
+  + *pronouns*: he/him/his
 
 <br>
 <br>
