@@ -37,6 +37,9 @@ library(gt)
   + *office hours*: By appointment
   + *pronouns*: he/him/his
 
+If you are concurrently taking any courses with the GE assigned to this course, please let the instructor know. The GE will not be involved with any review of assignments for students in this course who are taking other courses concurrently.
+
+
 <br>
 <br>
 <br>
@@ -504,9 +507,9 @@ read_csv(here("rubrics", "student-engagement-inventory_rubric.csv")) %>%
 <br>
 <br>
 
-# Campus Emergency
+# Academic Disruption due to Campus Emergency
 
-In the event of a campus emergency that disrupts academic activities, course requirements, deadlines, and grading percentages are subject to change. Information about changes in this course will be communicated as soon as possible by email, and on Canvas. If we are not able to meet face-to-face, students should immediately log onto Canvas and read any announcements and/or access alternative assignments. Students are also encouraged to continue the readings and other assignments as outlined on this syllabus or subsequent syllabi.
+In the event of a campus emergency that disrupts academic activities, course requirements, deadlines, and grading percentages are subject to change. Information about changes in this course will be communicated as soon as possible by email, and on Canvas. If we are not able to meet face-to-face, students should immediately log onto Canvas and read any announcements and/or access alternative assignments. Students are also encouraged to continue the readings and other assignments as outlined in this syllabus or subsequent syllabi.
 <br>
 <br>
 <br>
@@ -577,17 +580,19 @@ There may be situations beyond the control individual students that lead to exce
 
 # Diversity, Equity and Inclusion
 
-It is the policy of the University of Oregon to support and value equity and diversity and to provide inclusive learning environments for all students. To do so requires that we:
-- respect the dignity and essential worth of all individuals.
-- promote a culture of respect throughout the University community.
-- respect the privacy, property, and freedom of others.
-- reject bigotry, discrimination, violence, or intimidation of any kind.
-- practice personal and academic integrity and expect it from others.
-- promote the diversity of opinions, ideas and backgrounds which is the lifeblood of the university.
+It is the policy of the University of Oregon to support and value equity and diversity and to provide inclusive learning environments for all students.  To do so requires that we: 
+
+* respect the dignity and essential worth of all individuals. 
+* promote a culture of respect throughout the University community. 
+* respect the privacy, property, and freedom of others. 
+* reject bigotry, discrimination, violence, or intimidation of any kind. 
+* practice personal and academic integrity and expect it from others. 
+* promote the diversity of opinions, ideas and backgrounds which is the lifeblood of the university.
 
 In this course, class discussions, projects/activities and assignments will challenge students to think critically about and be sensitive to the influence, and intersections, of race, ethnicity, nationality, documentation, language, religion, gender, socioeconomic background, physical and cognitive ability, sexual orientation, and other cultural identities and experiences. Students will be encouraged to develop or expand their respect and understanding of such differences.
 
 Maintaining an inclusive classroom environment where all students feel able to talk about their cultural identities and experiences, ideas, beliefs, and values will not only be my responsibility, but the responsibility of each class member as well. Behavior that disregards or diminishes another student will not be permitted for any reason. This means that no racist, ableist, transphobic, xenophobic, chauvinistic or otherwise derogatory comments will be allowed. It also means that students must pay attention and listen respectfully to each other’s comments.
+
 <br>
 <br>
 <br>
@@ -599,24 +604,28 @@ The University of Oregon is located on Kalapuya Ilihi, the traditional indigenou
 <br>
 
 # Using Pronouns and Personal Preference
-The College of Education is always working to include and engage everyone. One way we can do this is to share your pronouns, or the words you want to be called when people aren’t using your name. Like names, pronouns are an important part of how we identify that deserves to be respected. And we recognize that assuming someone’s gender can be hurtful, especially to members of our community who are transgender, genderqueer, or non-binary. As a community, we are all learning together about the importance of pronouns and being better allies to the trans community on campus. Please discuss the pronouns you wish to be used with your professor to help them be aware of how to address you respectfully. Please visit [UO pronouns page](https://studentlife.uoregon.edu/pronouns) for more information. Also see [here](https://canvas.uoregon.edu/courses/161255/pages/personal-pronouns-in-canvas?module_item_id=2655408) for directions on how to add pronouns in Canvas.
+The College of Education is always working to include and engage everyone. One way we can do this is to share your pronouns, or the words you want to be called when people aren’t using your name. Like names, pronouns are an important part of how we identify that deserves to be respected. And we recognize that assuming someone’s gender can be hurtful, especially to members of our community who are transgender, genderqueer, or non-binary. As a community, we are all learning together about the importance of pronouns and being better allies to the trans community on campus. Please discuss the pronouns you wish to be used with your professor to help them be aware of how to address you respectfully. Please visit this university website for more information - https://studentlife.uoregon.edu/pronouns
+
 <br>
 <br>
 <br>
 
 # Mental Health and Wellness
-Life right now is very complicated. Students often feel overwhelmed or stressed, experience anxiety or depression, struggle with relationships, or just need help navigating challenges in their life. If you're facing such challenges, you don't need to handle them on your own – there's help and support on campus. As your instructor if I believe you may need additional support, I will express my concerns, the reasons for them, and refer you to resources that might be helpful. It is not my intention to know the details of what might be bothering you, but simply to let you know I care and that help is available. Getting help is a courageous thing to do—for yourself and those you care about.
+Life at college can be very complicated. Students often feel overwhelmed or stressed, experience anxiety or depression, struggle with relationships, or just need help navigating challenges in their life. If you're facing such challenges, you don't need to handle them on your own - there's help and support on campus. 
 
-University Health Services help students cope with difficult emotions and life stressors. If you need general resources on coping with stress or want to talk with another student who has been in the same place as you, visit the [Duck Nest](https://health.uoregon.edu/ducknest) (located in the EMU on the ground floor) and get help from one of the specially trained Peer Wellness Advocates. 
+As your instructor if I believe you may need additional support, I will express my concerns, the reasons for them, and refer you to resources that might be helpful. It is not my intention to know the details of what might be bothering you, but simply to let you know I care and that help is available. Getting help is a courageous thing to do—for yourself and those you care about.
 
-University Counseling Services (UCS) has a team of dedicated staff members to support you with your concerns, many of whom can provide identity-based support. All clinical services are free and confidential. Find out more [here](https://counseling.uoregon.edu) or by calling 541-346-3227 (anytime UCS is closed, the After-Hours Support and Crisis Line is available by calling this same number).
+University Health Services help students cope with difficult emotions and life stressors. If you need general resources on coping with stress or want to talk with another student who has been in the same place as you, visit the Duck Nest (located in the EMU on the ground floor) and get help from one of the specially trained Peer Wellness Advocates. Find out more at health.uoregon.edu/ducknest.
+
+University Counseling Services (UCS) has a team of dedicated staff members to support you with your concerns, many of whom can provide identity-based support. All clinical services are free and confidential. Find out more at counseling.uoregon.edu or by calling 541-346-3227 (anytime UCS is closed, the After-Hours Support and Crisis Line is available by calling this same number).
 <br>
 <br>
 <br>
 
 # Basic Needs
 Any student who has difficulty affording groceries or accessing sufficient food to eat every day, or who lacks a safe and stable place to live and believes this may affect their performance in the course is urged to contact the Dean of Students Office (346-3216, 164 Oregon Hall) for support.
-This UO webpage includes resources for food, housing, healthcare, childcare, transportation, technology, finances, and legal support: https://blogs.uoregon.edu/basicneeds/food/
+This UO webpage includes resources for food, housing, healthcare, childcare, transportation, technology, finances, and legal support: https://blogs.uoregon.edu/basicneeds/food/  If your need is urgent, please contact the Care and Advocacy Program by calling 541-346-3216, filling out the [Community Care and Support form](https://cm.maxient.com/reportingform.php?UnivofOregon&layout_id=1), or by [scheduling an appointment](https://outlook.office365.com/owa/calendar/CareandAdvocacyProgram@uoregon.edu/bookings/) with an advocate. 
+
 
 ## Services for Students Facing Food Insecurity
  
@@ -660,37 +669,40 @@ I understand that sleep deprivation and exhaustion are among the most difficult 
 <br>
 
 # Accessible Education
-The University of Oregon is working to create inclusive learning environments. Please notify me if there are aspects of the instruction or design of this course that result in disability-related barriers to your participation. Participation includes access to lectures, web-based information, in-class activities, and exams. The [Accessible Education Center](http://aec.uoregon.edu/) works with students to provide an instructor notification letter that outlines accommodations and adjustments to class design that will enable better access. Contact the Accessible Education Center in 360 Oregon Hall at 541-346-1155 or uoaec@uoregon.edu for assistance with access or disability-related questions or concerns.
+The University of Oregon is working to create inclusive learning environments. Please notify me if there are aspects of the instruction or design of this course that result in disability-related barriers to your participation. Participation includes access to lectures, web-based information, in-class activities, and exams. The [Accessible Education Center](http://aec.uoregon.edu/) works with students to provide an instructor notification letter that outlines accommodations and adjustments to class design that will enable better access. Contact the Accessible Education Center in 360 Oregon Hall at 541-346-1155 or uoaec@uoregon.edu for assistance with access or disability-related questions or concerns..
 <br>
 <br>
 
 # Accommodation for Religious Observances
-The university makes reasonable accommodations, upon request, for students who are unable to attend a class for religious obligations or observance reasons, in accordance with the university discrimination policy which says “Any student who, because of religious beliefs, is unable to attend classes on a particular day shall be excused from attendance requirements and from any examination or other assignment on that day. The student shall make up the examination or other assignment missed because of the absence.” To request accommodations for this course for religious observance, visit the Office of the Registrar's [website](https://registrar.uoregon.edu/calendars/religious-observances) and complete and submit to the instructor the “Student Religious Accommodation Request” form prior to the end of the second week of the term.
+The university makes reasonable accommodations, upon request, for students who are unable to attend a class for religious obligations or observance reasons, in accordance with the university discrimination policy which says “Any student who, because of religious beliefs, is unable to attend classes on a particular day shall be excused from attendance requirements and from any examination or other assignment on that day. The student shall make up the examination or other assignment missed because of the absence.” To request accommodations for this course for religious observance, visit the Office of the Registrar's website (https://registrar.uoregon.edu/calendars/religious-observances) and complete and submit to the instructor the “Student Religious Accommodation Request” form prior to the end of the second week of the term.
 <br>
 <br>
+
+# Respect for Diversity
+You can expect to be treated with respect in this course. Both students and your instructor(s) enter with many identities, backgrounds, and beliefs. Students of all racial identities, ethnicities, and genders, gender identities, gender expressions, national origins, religious affiliations, sexual orientation, citizenship statuses, ability and other visible and non-visible differences belong in and contribute to this class and this discipline. All students are expected to contribute to a respectful, welcoming and inclusive environment for every member of the class.
+
+Class rosters are provided to instructors with students’ legal names. Please let me know if the name or pronouns I have for you are not accurate. It is important to me to address you properly.
+
+Please let me know if aspects of the instruction, course design, or class activities undermine these principles in any way. You may also notify the (Home Department) at (contact information). For additional assistance and resources, you may also consider contacting the [Division of Equity and Inclusion through their website](http://inclusion.uoregon.edu/) or by phone (at 541-346-3175), or the [Center for Multicultural Academic Excellence through their website](https://inclusion.uoregon.edu/center-multicultural-academic-excellence-cmae) or by phone (at 541-346-3479).
+
 
 # Reporting Title IX Experiences
 Any student who has experienced sexual assault, relationship violence, sex or gender-based bullying, stalking, and/or sexual harassment may seek resources and help at safe.uoregon.edu. To get help by phone, a student can also call either the UO’s 24-hour hotline at 541-346-7244 [SAFE], or the non-confidential Title IX Coordinator at 541-346-8136. From the SAFE website, students may also connect to Callisto, a confidential, third-party reporting site that is not a part of the university. 
 
 Students experiencing any other form of prohibited discrimination or harassment can find information at https://respect.uoregon.edu/ or https://aaeo.uoregon.edu/ or contact the non-confidential AAEO office at 541-346-3123 or the Dean of Students Office at 541-346-3216 for help. As UO policy has different reporting requirements based on the nature of the reported harassment or discrimination, additional information about reporting requirements for discrimination or harassment unrelated to sexual assault, relationship violence, sex or gender based bullying, stalking, and/or sexual harassment is available at http://aaeo.uoregon.edu/content/discrimination-harassment 
 
-Specific details about confidentiality of information and reporting obligations of employees can be found at https://titleix.uoregon.edu.
+Specific details about confidentiality of information and reporting obligations of employees can be found at https://titleix.uoregon.edu. 
 <br>
 <br>
 
-# Reporting Obligations
-I am a designated reporter. For information about my reporting obligations as an employee, please see Employee Reporting Obligations on the Office of Investigations and Civil Rights Compliance (OICRC) website. Students experiencing any form of prohibited discrimination or harassment, including sex or gender-based violence, may seek information and resources at https://safe.uoregon.edu, https://respect.uoregon.edu, or https://investigations.uoregon.edu or contact the non-confidential Title IX office/Office of Civil Rights Compliance (541-346-3123), or Dean of Students offices (541-346-3216), or call the 24-7 hotline 541-346-SAFE for help. I am also a mandatory reporter of child abuse. Please find more information at Mandatory Reporting of Child Abuse and Neglect.
+# Mandatory Reporter Status
+I am a designated reporter. For information about my reporting obligations as an employee, please see [Employee Reporting Obligations](https://investigations.uoregon.edu/employee-responsibilities#employee-obligations) on the Office of Investigations and Civil Rights Compliance (OICRC) website. Students experiencing any form of prohibited discrimination or harassment, including sex or gender-based violence, may seek information and resources at safe.uoregon.edu, respect.uoregon.edu, or investigations.uoregon.edu or contact the non-confidential Title IX office/Office of Civil Rights Compliance (541-346-3123), or Dean of Students offices (541-346-3216), or call the 24-7 hotline 541-346-SAFE for help. I am also a mandatory reporter of child abuse. Please find more information at [Mandatory Reporting of Child Abuse and Neglect](https://investigations.uoregon.edu/employee-responsibilities#employee-obligations).
+
 <br>
 <br>
 
-# Academic Misconduct Policy
-The [University Student Conduct Code](https://conduct.uoregon.edu) defines academic misconduct. Students are prohibited from committing or attempting to commit any act that constitutes academic misconduct. By way of example, students should not give or receive (or attempt to give or receive) unauthorized help on assignments or examinations without express permission from the instructor. Students should properly acknowledge and document all sources of information (e.g. quotations, paraphrases, ideas) and use only the sources and resources authorized by the instructor. If there is any question about whether an act constitutes academic misconduct, it is the students’ obligation to clarify the question with the instructor before committing or attempting to commit the act. [Additional information](https://researchguides.uoregon.edu/citing-plagiarism) about a common form of academic misconduct, plagiarism.
-<br>
-<br>
-<br>
-
-# Academic Integrity for Remote Learning
-The University Student Conduct Code defines academic misconduct, which includes unauthorized help on assignments and examinations and the use of sources without acknowledgment. Academic misconduct is prohibited at UO. I will report misconduct to the Office of Student Conduct and Community Standards—consequences can include failure of the course. In our remote class, I may ask you to certify that your products are your own work. If a technological glitch disrupts your work, don’t panic. Take a photo to document the error message you’re receiving and then email me.
+# Academic Integrity
+The University Student Conduct Code (available at conduct.uoregon.edu) defines academic misconduct. Students are prohibited from committing or attempting to commit any act that constitutes academic misconduct. By way of example, students should not give or receive (or attempt to give or receive) unauthorized help on assignments or examinations without express permission from the instructor. Students should properly acknowledge and document all sources of information (e.g. quotations, paraphrases, ideas) and use only the sources and resources authorized by the instructor. If there is any question about whether an act constitutes academic misconduct, it is the students’ obligation to clarify the question with the instructor before committing or attempting to commit the act. Additional information about a common form of academic misconduct, plagiarism, is available at https://researchguides.uoregon.edu/citing-plagiarism.
 <br>
 <br>
 <br>
@@ -698,30 +710,30 @@ The University Student Conduct Code defines academic misconduct, which includes 
 # Conflict Resolution
 Several options, both informal and formal, are available to resolve conflicts for students who believe they have been subjected to or have witnessed bias, unfairness, or other improper treatment. 
 
-It is important to exhaust the administrative remedies available to you including discussing the conflict with the specific individual, contacting the Department Head, or within the College of Education, fall term you can contact the Associate Dean for Academic Affairs, Lillian Duran, 541-346-2502, lduran@uoregon.edu. Outside the College, you can contact: 
-* [UO Bias Response Team](http://bias.uoregon.edu/whatbrt.htm): 346-3216
+It is important to exhaust the administrative remedies available to you including discussing the conflict with the specific individual, contacting the Department Head, or within the College of Education, fall term you can contact the Associate Dean for Academic Affairs, Sylvia Thompson, (541) 346-2483, sthomps5@uoregon.edu. Outside the College, you can contact: 
+
+* [UO Bias Response Team](http://bias.uoregon.edu/whatbrt.htm): 346-3216  
 * [Conflict Resolution Services](http://studentlife.uoregon.edu/support): 346-3216 
 * [Affirmative Action and Equal Opportunity](http://aaeo.uoregon.edu/): 346-3123 
+
 <br>
 <br>
 <br>
 
 # Grievance Policy
-A student or group of students of the College of Education may appeal decisions or actions pertaining to admissions, programs, evaluation of performance and program retention and completion. Students who decide to file a grievance should follow University [student grievance procedures](https://policies.uoregon.edu/grievance-procedures) and/or consult with the College Associate Dean for Academic Affairs (Lillian Duran, 346-2502, lduran@uoregon.edu).
+A student or group of students of the College of Education may appeal decisions or actions pertaining to admissions, programs, evaluation of performance and program retention and completion. Students who decide to file a grievance should follow University student grievance procedures (https://policies.uoregon.edu/grievance-procedures) and/or consult with the College Associate Dean for Academic Affairs (Sylvia Thompson, 541-346-2483, sthomps5@uoregon.edu).
 <br>
 <br>
 <br>
 
-# In Case of Inclement Weather
-In the event the University operates on a curtailed schedule or closes, UO media relations will notify the Eugene-Springfield area radio and television stations as quickly as possible. In addition, a notice regarding the university’s schedule will be posted on the [UO](https://www.uoregon.edu/) main home page. Additional information is available [here](https://hr.uoregon.edu/about-hr/campus-notifications/inclement-weather ).
-
-If an individual class must be canceled due to inclement weather, illness, or other reason, a notice will be posted on Canvas or via email. During periods of inclement weather, please check Canvas and your email rather than contact department personnel. Due to unsafe travel conditions, departmental staff may be limited and unable to handle the volume of calls from you and others.
+# Inclement Weather
+It is generally expected that class will meet unless the University is officially closed for inclement weather. If it becomes necessary to cancel class while the University remains open, this will be announced on Canvas and by email. Updates on inclement weather and closure are also communicated in other ways described here: https://hr.uoregon.edu/about-hr/campus-notifications/inclement-weather/inclement-weather-immediate-updates.
 <br>
 <br>
 <br>
 
 # Course Incomplete Policy
-Students are expected to be familiar with university policy regarding grades of “incomplete” and the time line for completion. For details on the policy and procedures regarding incompletes, Please see: https://education.uoregon.edu/academics/incompletes-courses
+Students are expected to be familiar with university policy regarding grades of “incomplete” and the timeline for completion. For details on the policy and procedures regarding incompletes, Please see: https://education.uoregon.edu/academics/incompletes-courses
 <br>
 <br>
 <br>
