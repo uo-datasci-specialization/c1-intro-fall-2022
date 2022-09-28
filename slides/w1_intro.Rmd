@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Data Science with `R`"
 subtitle: "EDLD 651"
-author: "Joe Nese<br><span style = 'font-size: 50%;'>University of Oregon<br>Fall 2021</span>"
+author: "Joe Nese<br><span style = 'font-size: 50%;'>University of Oregon<br>Fall 2022</span>"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -57,7 +57,15 @@ style_duo_accent(
 xaringanExtra::use_freezeframe()
 ```
 
+background-color: #CC79A7
+class: center, middle
+
+## How many beans are in the jar?
+
+(keep your guess to yourself!)
+
 ---
+
 class: inverse, left, middle
 
 # Introduction to the Course
@@ -78,30 +86,6 @@ class: inverse, left, middle
 
 ---
 
-# Some COVID-19 Notes
-
-* Masks required at all times
-* Try to sit in the same seat each week
-* See [syllabus](https://uo-datasci-specialization.github.io/c1-intro-fall-2021/syllabus.html#UO_COVID-19_Regulations__Prevention) for related policies
-* Communicate early and often with me
-* Allow everyone grace
-* Questions?
-
----
-
-## Courageous Conversations with Me
-
-* Creating norms of openness, understanding, and development
-* An opportunity for us to grow
-* Assume positive intent
-* Critical for my work (and yours)
-
-.footnote[
-Credit: Dr. Rhonda Nese
-]
-
----
-
 # About me
 
 * BA: UC Santa Barbara
@@ -114,6 +98,7 @@ Credit: Dr. Rhonda Nese
 * Inform the applied research methodologies used by researchers 
 * Developing and improving systems that support data-based decision making using advanced technologies to influence teachers’ instructional practices and increase student achievement
   + [CORE](https://jnese.github.io/core-blog/) and [CORE II](https://jnese.github.io/coreprosody)
+* Inclusive Skill-building Learning Approach ([ISLA](https://blogs.uoregon.edu/neselabs/isla/)) 
   
 **Teaching**
 * EDLD 651 - this one!
@@ -122,15 +107,40 @@ Credit: Dr. Rhonda Nese
 
 ---
 
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/63/Unicycle.svg) 
+background-size: 100px
+background-position: 90% 8%
+
+# A little about Errol
+
+**School and Work**
+
+- BA: Knox College, Computer Science and Philosophy
+- Former Product Manager in NYC for a Regulatory Technology company
+- Program Manager/Instructor at AI for Social Good educational company
+- 2nd year in the QRME program here
+
+**Research**
+
+- Current work: PISA/PILA assessment analysis, can process data provide useful insights to teachers?
+- Past work: iClicker question database for Active Learning, how do questions change over time?
+- Future goals: Create tools/frameworks for new teachers to help them stay in the field!
+
+**Fun Stuff**
+
+- Knitting! Water Polo! Ultimate Frisbee! Bikes with 1 or 2 wheels! Building Community!
+
+---
+
 # About you
 
 Please introduce yourself 
 
-* Name and program/year of study 
-* Why you want to learn `R`?
-* Do you have any `R` experience?
-* Tell me whatever you’d like me and the class to know (e.g., pronouns, circumstances)
-* How many beans are in the jar?
+1. Name and program/year of study 
+2. Why you want to learn `R`?
+3. Do you have any `R` experience?
+4. Tell me whatever you’d like me and the class to know (e.g., pronouns, circumstances)
+5. How many beans are in the jar?
   + No changing your answer! *Academic integrity!*
 
 ---
@@ -150,21 +160,21 @@ class: center, middle
 ---
 ## Create a journal article!
 
-### with `{rmarkdown}` or `{papaja}`
+### with `{rmarkdown}`, `quarto`, or `{papaja}`
 
 Like we just did!
 
 ---
 ## Create slides! 
 
-### with `{xaringan}`
+### with `{xaringan}` or `quarto`
 
 Like these!
 
 ---
 ## Create a website!
 
-### with `{blogdown}`, `{distill}`, `{bookdown}`, `{rmarkdown}`
+### with `{blogdown}`, `{distill}`, `{bookdown}`, `{rmarkdown}`, or `quarto`
 
 .pull-left[
 [**For a project**](https://jnese.github.io/coreprosody/)
@@ -234,7 +244,7 @@ class: center, middle
 --
 
 **Web**
-* `{blogdown}`, `{distill}`, `{bookdown}` –- build your own website
+* `{blogdown}`, `{distill}`, `{bookdown}`, `quarto` –- build your own website
 * `{rvest}` –- scrape web data
 
 --
@@ -271,8 +281,6 @@ knitr::include_graphics("https://media2.giphy.com/media/OcZp0maz6ALok/giphy.gif?
 ```
 
 ---
-
---
 
 # Dr. Richard Feynman
 
@@ -324,7 +332,7 @@ knitr::include_graphics("https://media0.giphy.com/media/26ybwvTX4DTkwst6U/giphy.
 
 --
 
-```{r, out.height='60%'}
+```{r, out.height='40%'}
 knitr::include_graphics("images/feynman_trying.png")
 ```
 
@@ -364,7 +372,6 @@ knitr::include_graphics("images/feynman_problemsolve.png")
 
 **...is not**
 * all encompassing 
-* first of the series
 * a statistics course 
   + but we'll use some stats in examples
 
@@ -417,6 +424,19 @@ Sometimes I may ask people to share with the class something they have learned.
 
 ---
 
+## Courageous Conversations with Me
+
+* Creating norms of openness, understanding, and development
+* An opportunity for us to grow
+* Assume positive intent
+* Critical for my work (and yours)
+
+.footnote[
+Credit: Dr. Rhonda Nese
+]
+
+---
+
 class: inverse, left, middle
 
 # Syllabus
@@ -439,11 +459,11 @@ class: inverse, left, middle
 
 # Course Site
 
-**https://uo-datasci-specialization.github.io/c1-intro-fall-2021/index.html**
+**https://uo-datasci-specialization.github.io/c1-intro-fall-2022/index.html**
 
 * schedule
-* slides (before each class)
-* assignments (after each class)
+* slides (*before* each class)
+* assignments (*after* each class)
 * syllabus
 * data
 
@@ -451,7 +471,6 @@ class: inverse, left, middle
 
 * submit assignments
 * announcements
-* data?
 
 ---
 
@@ -491,7 +510,6 @@ knitr::include_graphics("https://socviz.co/assets/dv-cover-pupress.jpg")
 
 * Supplemental learning opportunities that I hope are helpful
 * Part of your “Supplemental Learning” grade
-* First time we are using Codecademy
 * I will be interested in hearing your feedback
   + [Not using Datacamp](https://www.noamross.net/2019/04/12/datacamp-sexual-assault/)
 
@@ -572,10 +590,11 @@ read_csv(here("rubrics", "grades_rubric.csv")) %>%
 
 * Scored on a “best honest effort” basis
   + generally zero or full credit 
-* If you find yourself stuck and unable to proceed, **please contact the instructors for help rather than submitting incomplete work**
-  + Contacting the instructor is part of the “best honest effort” and can result in full credit for an assignment even if the work is not fully complete
-* **If the assignment is not complete, and the student has not contacted the instructor for help, it is likely to result is a partial credit score or a zero** * Labs submitted late will be docked by 30% (3 points)
-  + Labs are generally due the class after they are assigned, before class starts
+* If you find yourself stuck and unable to proceed, **please contact the instructor/GE for help rather than submitting incomplete work**
+  + Contacting the instructor/GE is part of the "best honest effort" and can result in full credit for an assignment even if the work is not fully complete
+* **If the assignment is not complete, and the student has not contacted the instructor for help, it is likely to result is a partial credit score or a zero** 
+  + Labs submitted late will be docked by 30% (3 points)
+* Labs are generally due the class after they are assigned, before class starts
 
 ---
 
@@ -586,7 +605,7 @@ read_csv(here("rubrics", "grades_rubric.csv")) %>%
 
 **Final project must:**
 * Be fully reproducible
-  + This implies the data are open
+  + this implies the data are open
 * Be a collaborative project hosted on GitHub
 * Move data from its raw "messy" format to a tidy data format
 * Include at least two exploratory plots
@@ -596,12 +615,12 @@ read_csv(here("rubrics", "grades_rubric.csv")) %>%
 
 # Final Project - Dates
 
-* **Week 3  (10/20)**: Self-selected groups finalized
-* **Week 5  (11/3)**:  Final Project Outline due
-* **Week 8  (11/24)**: Data prep script due
-* **Week 9  (12/1)**:  Peer review due
-* **Week 10 (12/8)**:  Final project presentations
-* **Week 11 (12/15)**: Final Paper due
+* **Week 3  (10/12)**: Self-selected groups finalized
+* **Week 5  (10/26)**:  Final Project Outline due
+* **Week 9  (11/23)**: Data prep script due
+* **Week 10  (11/30)**:  Peer review due
+* **Week 10 (11/30)**:  Final project presentations
+* **Week 11 (12/7)**: Final Paper due
 
 ---
 
@@ -719,7 +738,7 @@ Git might be frustrating, but we’ll get through it together!
 
 class: inverse, left, middle
 
-# Welcome to `R` !
+# Welcome to R !
 
 ---
 
@@ -880,20 +899,20 @@ Data can be a variety of types
 
 --
 
-* character: `"Hello world!"` or `"EDLD 651"`
+* **character**: `"Hello world!"` or `"EDLD 651"`
 
 --
 
-* numeric: `2` and/or `15.5`
+* **numeric**: `2` and/or `15.5`
   + decimal also called `double`
 
 --
 
-* integer: `2L` (the `L` tells `R` to store this as an integer)
+* **integer**: `2L` (the `L` tells `R` to store this as an integer)
 
 --
 
-* logical: `TRUE` or `FALSE`
+* **logical**: `TRUE` or `FALSE`
 
 --
 
@@ -931,7 +950,7 @@ Functions are generally followed by `()`
 
 --
 
-**`package::function()`**
+**`function()` == `package::function()`**
 
 the package is also called the "namespace"
 
@@ -947,7 +966,7 @@ the package is also called the "namespace"
 `?function_name()`  
 
 ```{r, eval=FALSE, echo=TRUE}
-?mutate() #(mutate() is a function in the {dplyr} package)
+?mutate() #mutate() is a function in the {dplyr} package
 
 ?dplyr::mutate()
 ```
@@ -966,10 +985,11 @@ background-image: url("./images/help_info.png")
 
 * Resources on syllabus
 * Your classmates!
-* Me
+* Me and Errol
   + Appointment by email
   + If you email me with a question, provide your `R` files & data
 * Google
+  + stackoverflow
 
 ---
 
@@ -1042,7 +1062,7 @@ My favorites (for Macs, sub `Command` for `Ctrl`)
 
 Other good ones
 * `Alt + -` = insert assignment operator (<-)
-* `Ctrl + Shift + Alt + Up/Down` = add cursor above/below current cursor
+* `Alt + Shift + Up/Down` = add cursor above/below current cursor
 
 **.darkorange[[demo]]**
 
@@ -1090,7 +1110,6 @@ Pre-loaded packages work on launch
 
 For example, `plot()` is part of the `{graphics}` package, which ships with `R`
 --
-
 ```{r, echo=TRUE, fig.height=5}
 plot(x = 1:10, y = 1:10)
 ```
@@ -1136,8 +1155,8 @@ You will only need to install a package **once** (generally). After that, it is 
 
 --
 
-Currently, the CRAN package repository features 18,000+ packages
-* 16,300+ last year at this time
+Currently, the CRAN package repository features 18,700+ packages
+* 18,000+ last year at this time
 * constantly evolving to keep up with the varied demands of the data science community
 
 ---
@@ -1160,7 +1179,7 @@ Currently, the CRAN package repository features 18,000+ packages
 
 --
 
-* you will do this each time you use the package in your scripts
+* you will do this **every** time you use the package in your scripts
 * notices no quotes
 
 ---
@@ -1202,7 +1221,7 @@ class: inverse, left, middle
 # How do we access variables?
 
 * Generally, in this course, with `{tidyverse}` tools
-* Sometimes with `$` or with `[]`
+* Sometimes with `base` using `$` or with `[]`
   + `data_name$variable_name`
   + `data_name["variable_name"]`
 
@@ -1211,7 +1230,8 @@ class: inverse, left, middle
 # Some data
 
 Let's load the `{tidyverse}`, and then we'll access some variables from the data sets within the packages
-* Look at the `gss_cat` data frame
+
+* Look at the `gss_cat` data frame which loads with `tidyverse`
 
 --
 
@@ -1321,12 +1341,12 @@ gss_cat %>%
          age > 55) %>% 
   select(age, partyid, rincome) %>% 
   arrange(age) %>% 
-  slice(1:5)
+  slice(1:4)
 ```
 
 --
 
-#### Equivalent to:
+**Equivalent to:**
 
 ```{r, echo=TRUE, eval=FALSE}
 slice(arrange(select(filter(gss_cat, relig == "Buddhism", age > 55), age, partyid, rincome), age), 1:5)
