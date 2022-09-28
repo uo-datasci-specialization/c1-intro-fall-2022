@@ -1,7 +1,7 @@
 ---
 title: "The Great Bean Experiment!"
 author: "Joe Nese and EDLD 651"
-date: "9/29/2021"
+date: "9/28/2022"
 output: html_document
 #    code_folding: hide
 bibliography: bean_bib.bib
@@ -56,7 +56,7 @@ answ <- tibble(
 <center>**Method**</center>
 <br>
 
-We used the following packages: equatiomatic (Anderson, ND), ggrepel @ggrepel, ggthemes @ggthemes, here @here, knitr @knitr, parameters @parameters, reactable @reactable, and tidyverse @tidyverse.
+We used the following packages: `equatiomatic` (Anderson, ND), `ggrepel` @ggrepel, `ggthemes` @ggthemes, `here` @here, `knitr` @knitr, `parameters` @parameters, `reactable` @reactable, and `tidyverse` @tidyverse.
 
 <br>
 **Research Question**
@@ -143,9 +143,9 @@ Now let's get to the results...
 
 The actual number of beans in the jar was **`r format(truth, big.mark = ",")`**.
 
-The person closest to the truth was **`r slice(dta, which.min(abs(dist))) %>% pull(first)`** with a guess of **`r slice(dta, which.min(abs(dist))) %>% pull(guess) %>% format(., big.mark = ",")`** beans. This is a difference of `r round((slice(dta, which.min(abs(dist))) %>% pull(guess))/(truth*100), 2)`%.
+The person closest to the truth was **`r slice(dta, which.min(abs(dist))) %>% pull(first)`** with a guess of **`r slice(dta, which.min(abs(dist))) %>% pull(guess) %>% format(., big.mark = ",")`** beans. This is a difference of `r round(100 - slice(dta, which.min(abs(dist))) %>% pull(guess)/truth*100, 2)`%.
 
-The class mean was **`r format(round(mean(dta$guess, na.rm = TRUE), 1), big.mark = ",")`** (*SD* = `r round(sd(dta$guess, na.rm = TRUE))`). This is a difference of `r round(mean(dta$guess, na.rm = TRUE)/(truth*100), 2)`%.
+The class mean was **`r format(round(mean(dta$guess, na.rm = TRUE), 1), big.mark = ",")`** (*SD* = `r format(round(sd(dta$guess, na.rm = TRUE)), big.mark = ",")`). This is a difference of `r abs(round(100 - mean(dta$guess, na.rm = TRUE)/truth*100, 1))`%.
 
 So to answer our research question...
 
@@ -171,7 +171,7 @@ dta_smry <- dta %>%
   group_by(major) %>% 
   summarize(mean_guess = mean(guess, na.rm = TRUE))
 
-ggplot(dta, aes(major, guess, group = major)) +
+ggplot(dta, aes(fct_reorder(major, guess), guess, group = major)) +
   geom_point() +
   stat_summary(fun = "mean", 
                geom = "crossbar",
@@ -183,7 +183,8 @@ ggplot(dta, aes(major, guess, group = major)) +
     y = "Bean Guess",
     title = "Guesses by Major"
   ) +
-  theme(plot.title.position = "plot")
+  theme(plot.title.position = "plot",
+        axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=1))
 ```
 <br>
 ```{r}
@@ -204,7 +205,7 @@ ggplot(dta, aes(id, guess, group = id)) +
 
 <br>
 Let's run (bad) a regression!
-With some some help from the `{equatiomatic}` package by our own [Daniel Anderson](https://github.com/datalorax/equatiomatic)!
+With some some help from the `{equatiomatic}` package by [Daniel Anderson](https://github.com/datalorax/equatiomatic)!
 <br>
 
 ```{r}
