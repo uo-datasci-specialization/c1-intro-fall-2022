@@ -1362,7 +1362,7 @@ class: inverse, left, middle
 # Before next class
 
 * Reading
-  + [Week 1 reading](https://uo-datasci-specialization.github.io/c1-intro-fall-2021/schedule.html#week-1-introduction) (if you haven't already)
+  + [Week 1 reading](https://uo-datasci-specialization.github.io/c1-intro-fall-2022/schedule.html#week-1-introduction) (if you haven't already)
   + [Project-oriented Workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
   + [R4DS Ch 8](https://r4ds.had.co.nz/workflow-projects.html)
   + [R4DS 27](https://r4ds.had.co.nz/r-markdown.html)
@@ -1371,7 +1371,7 @@ class: inverse, left, middle
 * Assignments
   + [A Quick Tour of the RStudio IDE](http://milton-the-cat.rocks/learnr/r/r_getting_started/#section-a-quick-tour-of-r-studio)
   + [RStudio Primer: Programming basics](https://rstudio.cloud/learn/primers/1.2)
-  + [Codecademy: Introduction to R Syntax](https://www.codecademy.com/courses/learn-r/lessons/introduction-to-r/exercises/introduction)
+  + [Codecademy: Introduction to R Syntax](https://www.codecademy.com/courses/learn-r/lessons/introduction-to-r/exercises/why-r)
 
 
 ```{r, eval=FALSE}

@@ -100,31 +100,29 @@ The best way to learn to use `R` is to be exposed to and use R, so in this cours
 
 ### RStudio Primers
 We will use some of the [primers](https://rstudio.cloud/learn/primers) offered and developed by RStudio, mostly around introducing `R` programming, data visualization, and data cleaning in `R`. You will be working through:
-- [Programming Basics](https://rstudio.cloud/learn/primers/1.2), 
-- [Visualization Basics](https://rstudio.cloud/learn/primers/1.1), 
-<!-- - [Histograms](https://rstudio.cloud/learn/primers/3.3),  -->
-- [Working with Tibbles](https://rstudio.cloud/learn/primers/2.1), and
-<!-- - [Isolating Data with `{dplyr}`](https://rstudio.cloud/learn/primers/2.2), and  -->
-- [Join Data Sets](https://rstudio.cloud/learn/primers/4.3).
+
+* [Programming Basics](https://rstudio.cloud/learn/primers/1.2), 
+* [Visualization Basics](https://rstudio.cloud/learn/primers/1.1), 
+* [Working with Tibbles](https://rstudio.cloud/learn/primers/2.1), and
+* [Join Data Sets](https://rstudio.cloud/learn/primers/4.3).
 <br>
 <br>
 
 ### R-Bootcamp
 We will be using some content from the [R-Bootcamp](https://r-bootcamp.netlify.com/) course, developed by [Ted Laderas](https://laderast.github.io/) and [Jessica Minnier](http://jessicaminnier.com/), to supplement lectures. R-Bootcamp offers an introduction to manipulating and visualizing data in R using the tidyverse suite of packages. You will be working through:
-<!-- - [Chapter 1](https://r-bootcamp.netlify.app/chapter1),  -->
-- [Chapter 2](https://r-bootcamp.netlify.app/chapter2), 
-- [Chapter 3](https://r-bootcamp.netlify.app/chapter3), and 
-- [Chapter 4](https://r-bootcamp.netlify.app/chapter4).
+
+* [Chapter 2](https://r-bootcamp.netlify.app/chapter2), and
+* [Chapter 3](https://r-bootcamp.netlify.app/chapter3). 
 <br>
 <br>
 
 ### Codecademy
 We will also be using some content from the [Learn R](https://www.codecademy.com/learn/learn-r) course through [Codecademy](https://www.codecademy.com/). You will need to sign up for a free account. Codecademy can be used as a place for you to practice/grow the skills you learn in class, and a resource for your own exploration of topics not covered by this class if you so choose. You will be working through:
 
-- [Introduction: Introduction to R Syntax](https://www.codecademy.com/courses/learn-r/lessons/introduction-to-r/exercises/introduction),
-- [Fundamentals of Data Visualization with ggplot2: Introduction to Visualization with R](https://www.codecademy.com/courses/learn-r/lessons/intro-visualization-ggplot2-r/exercises/introduction),
-- [Learn R: Aggregates in R](https://www.codecademy.com/courses/learn-r/lessons/r-aggregates/exercises/introduction), and
-- [Learn R: Joining Tables in R](https://www.codecademy.com/courses/learn-r/lessons/r-multiple-tables/exercises/introduction)
+* [Introduction: Introduction to R Syntax](https://www.codecademy.com/courses/learn-r/lessons/introduction-to-r/exercises/why-r),
+* [Fundamentals of Data Visualization with ggplot2: Introduction to Visualization with R](https://www.codecademy.com/courses/learn-r/lessons/intro-visualization-ggplot2-r/exercises/layers-and-geoms),
+* [Learn R: Aggregates in R](https://www.codecademy.com/courses/learn-r/lessons/r-aggregates/exercises/column-statistics), and
+* [Learn R: Joining Tables in R](https://www.codecademy.com/courses/learn-r/lessons/r-multiple-tables/exercises/introduction)
 <br>
 <br>
 
