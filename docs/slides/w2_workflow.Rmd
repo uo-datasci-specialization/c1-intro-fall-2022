@@ -1,7 +1,7 @@
 ---
 title: "Week 2: Workflow"
 subtitle: ".R & .Rmd, Projects, Read Data"
-author: "Joe Nese<br><span style = 'font-size: 50%;'>University of Oregon<br>Fall 2021</span>"
+author: "Joe Nese<br><span style = 'font-size: 50%;'>University of Oregon<br>Fall 2022</span>"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -21,6 +21,7 @@ library(tidyverse)
 library(knitr)
 library(here)
 library(kableExtra)
+library(janitor)
 
 ```
 
@@ -57,7 +58,6 @@ The library also offers free short [workshops.](https://uoregon.libcal.com/calen
 
 ## Housekeeping
 
-* covid
 * syllabus corrected
 * assignments
 * breaks
@@ -80,6 +80,7 @@ class: inverse, left, middle
   + Loading packages
 * Looking at data
 * The pipe `%>%`
+  + also `|>`
 
 **Learning Objectives**
 
@@ -95,7 +96,7 @@ class: inverse, left, middle
 
 ---
 
-# RStudio Projects (.RProj)
+# RStudio Projects (.Rproj)
 
 An RStudio project - .Rproj - is basically a folder to house all the files for your project
 * scripts
@@ -109,20 +110,18 @@ An RStudio project - .Rproj - is basically a folder to house all the files for y
 
 * Work with several projects at the same time (several projects open)
   + these are self-contained!
-
 * Can save the history of your commands after quitting
-
 * Can specify version control system (e.g., Git)
-
 * Previously edited code tabs are restored upon opening
-
-* The current working directory is set to the project directory
+* The current **working directory** is set to the project directory
 
 ---
 
 # What's a working directory?
 
 Where you're at on your computer
+* the folder location
+* *Quick check-in*: does this make sense?
 
 You *can* change your working directory with `setwd("path/to/files")`...
 
@@ -130,7 +129,7 @@ You *can* change your working directory with `setwd("path/to/files")`...
 
 Instead, we’re going to use RStudio Projects and the `{here}` package
 
-You can `list.files(`*path*`)` to see the contents of your project directory (i.e., what your computer "sees")
+You can `list.files("path/to/files")` to see the contents of your project directory (i.e., what your computer "sees")
 
 --
 
@@ -143,7 +142,7 @@ You can `list.files(`*path*`)` to see the contents of your project directory (i.
 
 # What's different with .Rproj?
 
-Your working directory is immediately wherever your project is located
+Your working directory is immediately wherever your `.Rproj` project is located
 
 This is true for whoever is accessing the project
 
@@ -194,11 +193,22 @@ background-image: url("./images/hadley-tweet_1.png")
 
 # Project Oriented Workflow
 
-Solution: Write every script assuming it will be run in a fresh `R` process
+**Solution**: Write every script assuming it will be run in a fresh `R` process
 
-* Do not save `.RData` when you quit `R` and don’t load `.RData` when you start `R`
+--
 
-* Daily work habit: 
+1) Do not save `.RData` when you quit `R` and don’t load `.RData` when you start `R`
+
+Week 1: **Tools 🡆 Global Options...**
+
+General
+* Workspace
+  + "*Restore .RData into workspace at startup*" -- **Uncheck**
+  + "*Save workspace to .RData on exit:*" -- **Never**
+
+--
+
+2) Daily work habit: 
   + Restart `R` very often and re-run your developing script from the top
   + Use the RStudio menu item: **Session > Restart R** (`Ctrl/Command + Shift + F10`)
 
@@ -210,6 +220,8 @@ class: inverse, left, middle
 ---
 
 ## Let’s start by making a new project
+
+Typical workflow
 
 1. Make a new .RProj
 2. Add folders
@@ -288,7 +300,7 @@ class: inverse, left, middle
 
 Let’s save the following data files into our project "data" folder
 
-*go [here](https://uo-datasci-specialization.github.io/c1-intro-fall-2021/data_list.html) to download*
+*go [here](https://uo-datasci-specialization.github.io/c1-intro-fall-2022/data_list.html) to download*
 
 1. ecls-k_samp.sav
 2. Fatality.txt
@@ -327,22 +339,22 @@ We'll be talking about two data reading packages
 * Helps reproducibility
 * Your final project!
 
-Think of `here()` simply as a function to print a path
+Think of `here()` simply as a function to print a path name
 
-This **path** can be the **location** of your data
-
---
-
-**path** = **location**
+A **path** can be the **location** of your data
 
 .footnote[
 Art: [Allison Horst](https://www.allisonhorst.com/)
 ]
 
+--
+
+**path** = **location**
+
 ---
 # [`{here}`](https://here.r-lib.org/)
 
-Think of `here()` simply as a function to print a path
+Think of `here()` simply as a function to print a path name
 
 First, install/load the package
 
@@ -372,7 +384,7 @@ This is the "top level" directory of our project
 ---
 # [`{here}`](https://here.r-lib.org/)
 
-Think of `here()` simply as a function to print a path
+Think of `here()` simply as a function to print a path name
 
 Run this code in your project (console is fine)
 
@@ -414,7 +426,7 @@ This is the path to the "data" folder in our project directory
 
 # [`{here}`](https://here.r-lib.org/)
 
-Think of `here()` simply as a function to print a path
+Think of `here()` simply as a function to print a path name
 
 Run this code in your project (console is fine)
 
@@ -460,23 +472,25 @@ Use `here()` to access data or any file in your project
 # `{rio}`
 
 * `{rio}` is a wrapper around many different packages that import/export data in different formats
+
 * Great package
+
 * Most of the time "it just works" regardless of the source file type
   + this might not impress you, but it really should! 
-  + any package that turns a complex task into a simple procedure and “just works” is invaluable
+  + any package that turns a complex task into a simple procedure that "just works" is invaluable
 
 ---
 # [`import()`](https://cran.r-project.org/web/packages/rio/vignettes/rio.html)
 
-.darkorange[`import`]`(`.darkblue[`file`]`,` .pink[`format`]`,` .green[`setclass`], `...)`
+.darkblue[import](.darkorange[file], .pink[format], .green[setclass], ...)
 
-.darkblue[`file`]       = character string naming a file
+.darkorange[file]       = character string naming a file
 
 --
 
-.pink[`format`]         = (**optional**) character string of file format; e.g., `","` for comma-separated values
+.pink[format]           = (*optional*) character string of file format; e.g., `","` for comma-separated values
 
-.green[`setclass`]      = (**optional**) character vector specifying one or more classes to set on the import. Default is `"data.frame"`. We would probably prefer `"tbl_df"` for a `tibble`
+.green[setclass]      = (*optional*) character vector specifying one or more classes to set on the import. Default is `"data.frame"`. We would probably prefer `"tbl_df"` for a `tibble`
 
 ---
 
@@ -489,6 +503,8 @@ library(rio)
 
 # .sav
 eclsk <- import(here("data", "ecls-k_samp.sav"), setclass = "tbl_df")
+
+# Use `as_tibble` instead of `setclass = "tbl_df"`
 
 # .txt
 fatality <- import(here("data", "Fatality.txt")) %>% 
@@ -507,7 +523,7 @@ exam1 <- import(here("data", "Project_Reads_Scores.csv")) %>%
 #### Fatality.txt
 
 ```{r}
-import("https://raw.githubusercontent.com/uo-datasci-specialization/c1-intro-fall-2021/master/data/Fatality.txt",
+import("https://raw.githubusercontent.com/uo-datasci-specialization/c1-intro-fall-2022/master/data/Fatality.txt",
        setclass = "tbl_df")
 ```
 
@@ -520,13 +536,13 @@ Save data just as easily with `export()`
 #### You need two things:
 
 1. .green[What] to export?
-2. .darkblue[Where] to export it?
+2. .darkorange[Where] to export it?
 
-.darkorange[`export`]`(`.green[`x`]`,` .darkblue[`file`]`,` .pink[`format`]`, ...)`
+.darkblue[export](.green[x], .darkorange[file], .pink[format], ...)
 
-.green[`x`]      = data frame (tibble) to be written into a file
+.green[x]      = data frame (tibble) to be written into a file
 
-.darkblue[`file`] = character string naming a file
+.darkorange[file] = character string naming a file
 
 ---
 # [`export()`](https://cran.r-project.org/web/packages/rio/vignettes/rio.html)
@@ -536,13 +552,13 @@ Save data just as easily with `export()`
 #### You need two things:
 
 1. .green[What] to export?
-2. .darkblue[Where] to export it?
+2. .darkorange[Where] to export it?
 
-.darkorange[`export`]`(`.green[`x`]`,` .darkblue[`file`]`,` .pink[`format`]`, ...)`
+.darkblue[export](.green[x], .darkorange[file], .pink[format], ...)
 
-.green[`x`]      = data frame (tibble) to be written into a file
+.green[x]      = data frame (tibble) to be written into a file
 
-.darkblue[`file`] = character string naming a file
+.darkorange[file] = character string naming a file
 
 ```{r, eval=FALSE}
 export(exam1, here("data", "exam1.sav"))
@@ -568,14 +584,14 @@ Say your advisor uses SPSS, but their colleague uses Stata (and you use `R` 😎
 
 Just run one line of code!
 
-.darkorange[`convert`]`(`.lightblue[`in_file`]`,` .darkblue[`out_file`]`, ...)`
+.darkblue[convert](.green[in_file], .pink[out_file], ...)
 
-.lightblue[`in_file`] = character string naming an input file
+.green[in_file] = character string naming an input file
 
-.darkblue[`out_file`] = character string naming an output file
+.pink[out_file] = character string naming an output file
 
-.darkorange[`convert`]`(here("data", `.lightblue[`ecls-k_samp.sav`])),<br>
-&emsp;&emsp;&emsp;&emsp;&nbsp;`(here("data", `.darkblue[`ecls-k_samp.dta`]))
+.darkorange[convert](here("data", .green[ecls-k_samp.sav])),<br>
+&emsp;&emsp;&emsp;&emsp;&nbsp;(here("data", .pink[ecls-k_samp.dta]))
 
 ---
 
@@ -682,13 +698,17 @@ You just need one thing:
 1. **where** the data is located
 
 
-.darkorange[`read_csv`]`(`.darkblue[`file`]`, ...)`
+.darkblue[read_csv](.darkorange[file], ...)
 
-.darkblue[`file`]       = a **path** to a file, a connection, or literal data (either a single string or a raw vector)
+.darkorange[file]       = a **path** to a file, a connection, or literal data (either a single string or a raw vector)
 
 --
 
 **And how do we get a path string?**
+
+--
+
+with the `here()` function
 
 ---
 
@@ -719,18 +739,19 @@ web <- read_csv("https://github.com/datalorax/ncme_18/raw/master/data/pubschls.c
 Save data just as easily with `write_*()`
 
 #### You need two things:
+
 1. .green[What] to export?
-2. .darkblue[Where] to export it?
+2. .darkorange[Where] to export it?
 
 --
 
 * For example:
 
-.darkorange[`write_csv`]`(`.green[`x`]`,` .darkblue[`file`]`, ...)`
+.darkblue[write_csv](.green[x], .darkorange[file], ...)
 
-.green[`x`]      = data frame (tibble) to be written into a file
+.green[x]      = data frame (tibble) to be written into a file
 
-.darkblue[`file`] = character string naming a file to write to
+.darkorange[file] = character string naming a file to write to
 
 ---
 # [`write_*()`](https://readr.tidyverse.org/reference/index.html)
@@ -738,18 +759,19 @@ Save data just as easily with `write_*()`
 Save data just as easily with `write_*()`
 
 #### You need two things:
+
 1. .green[What] to export?
-2. .darkblue[Where] to export it?
+2. .darkorange[Where] to export it?
 
 --
 
 * For example:
 
-.darkorange[`write_csv`]`(`.green[`x`]`,` .darkblue[`file`]`, ...)`
+.darkblue[write_csv](.green[x], .darkorange[file], ...)
 
-.green[`x`]      = data frame (tibble) to be written into a file
+.green[x]      = data frame (tibble) to be written into a file (*named* `R` *object*)
 
-.darkblue[`file`] = character string naming a file to write to
+.darkorange[file] = character string naming a file to write to
 
 #### Basically
 
@@ -800,7 +822,7 @@ Run code
 * A computational document
 * Everything
 
--.footnote[
+.footnote[
 Source: [Allison Hill](https://apreshill.github.io/rmd4cdc/#11)
 ]
 
@@ -885,6 +907,7 @@ class: inverse, left, middle
 * you will only need to do this the first time you want to use the package
 * **never** keep this code line (you can run it in the console, or delete it from your script)
 * notices the quotes
+* **never keep this code line**
 
 --
 
@@ -920,10 +943,6 @@ Any time you want to use a package it should be *loaded*
   + styles **column names** (NOT data itself) with "snake_case": lower case and underscore between words
   + can choose other "`*_case`"
 
-
-.right[
- <p style="float: right;"><img src="https://raw.githubusercontent.com/sfirke/janitor/main/man/figures/logo_small.png" width="50" height="50"> 
-]
 
 ---
 class: inverse, left, middle
@@ -961,13 +980,13 @@ Let's work Within the "my_first_project" .RProj
 * `library(tidyverse)`
 * `library(janitor)`
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 library(janitor)
 ```
 
 (2) Read in the [Penguins.csv](https://uo-datasci-specialization.github.io/c1-intro-fall-2021/data_list.html) data
 * Let's name the data "*penguins*"
-* Three options
+* Three options, choose one
 
 ```{r, results='hide'}
 # rio::import()
@@ -1112,8 +1131,20 @@ penguins %>%
   filter(species == "Adelie",
          bill_length_mm > 40) %>% 
   select(island, bill_length_mm, body_mass_g) %>% 
-  arrange(bill_length_mm) %>% 
-  slice(1:3)
+  arrange(bill_length_mm) 
+```
+
+---
+# Why use `%>%`
+
+Chaining arguments is **efficient** and **easy to read**
+
+```{r, eval=FALSE}
+penguins %>% 
+  filter(species == "Adelie",
+         bill_length_mm > 40) %>% 
+  select(island, bill_length_mm, body_mass_g) %>% 
+  arrange(bill_length_mm) 
 ```
 
 --
@@ -1121,7 +1152,7 @@ penguins %>%
 Equivalent to:
 
 ```{r, eval=FALSE}
-slice(arrange(select(filter(penguins, species == "Adelie", bill_length_mm > 40), island, bill_length_mm, body_mass_g), bill_length_mm), 1:3)
+arrange(select(filter(penguins, species == "Adelie", bill_length_mm > 40), island, bill_length_mm, body_mass_g), bill_length_mm)
 ```
 
 ---
@@ -1167,10 +1198,6 @@ Script on website
 
 Submit a rendered .html file to Canvas
 * *Assignments > Homeworks > HW 1*
-
-You **may** need to install [`{tinytex}`](https://yihui.name/tinytex/) to get your .Rmd file to render to an .html file
-* If you want to try this, read the embedded link above first
-* If you are having trouble contact me
 
 ---
 # Before next class
