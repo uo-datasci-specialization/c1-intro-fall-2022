@@ -38,7 +38,6 @@ The library also offers free short [workshops.](https://uoregon.libcal.com/calen
 
 ## Housekeeping
 
-* syllabus corrected
 * assignments
 * breaks
 
@@ -541,7 +540,7 @@ Save data just as easily with `export()`
 #### You need two things:
 
 1. .green[What] to export?
-2. .darkorange[Where] to export it?
+2. .darkorange[Where] to export?
 
 .darkblue[export](.green[x], .darkorange[file], .pink[format], ...)
 
@@ -596,8 +595,8 @@ Just run one line of code!
 
 .pink[out_file] = character string naming an output file
 
-.darkorange[convert](here("data", .green[ecls-k_samp.sav])),&lt;br&gt;
-&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;nbsp;(here("data", .pink[ecls-k_samp.dta]))
+.darkorange[convert](here("data", .green["ecls-k_samp.sav"])),&lt;br&gt;
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;nbsp;(here("data", .pink["ecls-k_samp.dta"]))
 
 ---
 
@@ -730,7 +729,7 @@ eclsk %&gt;%
 
 You just need one thing:
 
-1. **where** the data is located
+1. .darkorange[where] the data is located
 
 
 .darkblue[read_csv](.darkorange[file], ...)
@@ -776,7 +775,7 @@ Save data just as easily with `write_*()`
 #### You need two things:
 
 1. .green[What] to export?
-2. .darkorange[Where] to export it?
+2. .darkorange[Where] to export?
 
 --
 
@@ -796,9 +795,7 @@ Save data just as easily with `write_*()`
 #### You need two things:
 
 1. .green[What] to export?
-2. .darkorange[Where] to export it?
-
---
+2. .darkorange[Where] to export?
 
 * For example:
 
@@ -988,7 +985,7 @@ class: inverse, left, middle
 ---
 # New script
 
-Let's work Within the "my_first_project" .RProj 
+Let's work within the "my_first_project" .RProj 
 
 (1) Open a new R Markdown file 
   
@@ -1016,12 +1013,9 @@ Let's work Within the "my_first_project" .RProj
 * `library(tidyverse)`
 * `library(janitor)`
 
+--
 
-```r
-library(janitor)
-```
-
-(2) Read in the [Penguins.csv](https://uo-datasci-specialization.github.io/c1-intro-fall-2021/data_list.html) data
+(2) Read in the [Penguins.csv](https://uo-datasci-specialization.github.io/c1-intro-fall-2022/data_list.html) data
 * Let's name the data "*penguins*"
 * Three options, choose one
 
@@ -1383,7 +1377,7 @@ class: inverse, left, middle
 # Homework Notes
 
 Script on website
-* Download **Homework 1** from the course [Schedule](https://uo-datasci-specialization.github.io/c1-intro-fall-2021/schedule.html) or [Assignments](https://uo-datasci-specialization.github.io/c1-intro-fall-2021/assignments.html) page
+* Download **Homework 1** from the course [Schedule](https://uo-datasci-specialization.github.io/c1-intro-fall-2022/schedule.html) or [Assignments](https://uo-datasci-specialization.github.io/c1-intro-fall-2022/assignments.html) page
 * Work with this .Rmd file
 
 Submit a rendered .html file to Canvas
@@ -1397,7 +1391,7 @@ Submit a rendered .html file to Canvas
 * Supplemental Learning
   + [RStudio Primer: Data Visualization Basics](https://rstudio.cloud/learn/primers/1.1)
   + [Rbootcamp: Ch 2](https://r-bootcamp.netlify.app/chapter2)
-  + [Codecademy: Introduction to Visualization with R](https://www.codecademy.com/courses/learn-r/lessons/intro-visualization-ggplot2-r/exercises/introduction)
+  + [Codecademy: Introduction to Visualization with R](https://www.codecademy.com/courses/learn-r/lessons/intro-visualization-ggplot2-r/exercises/layers-and-geoms)
 * Homework
   + **Homework 1**
 * Final project
@@ -1592,7 +1586,7 @@ table(penguins$species)
 hist(penguins$body_mass_g)
 ```
 
-![](w2_workflow_files/figure-html/unnamed-chunk-44-1.png)&lt;!-- --&gt;
+![](w2_workflow_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
 ]
 
 ---
