@@ -41,7 +41,7 @@ table_style <- function(data) {
     )
 }
 
-assign_links <- read_xlsx(here::here("nopublish", "schedule.xlsx"), sheet = "schedule") %>%
+assign_links <- read_xlsx(here::here("nopublish", "schedule_updated.xlsx"), sheet = "schedule") %>%
   select(Assigned, assigned_link) %>%
   drop_na() %>% 
   filter(str_detect(Assigned, "Homework")) %>%
@@ -49,7 +49,7 @@ assign_links <- read_xlsx(here::here("nopublish", "schedule.xlsx"), sheet = "sch
                          ~paste0("\ ", xfun::embed_file(path = here("homeworks", .x), text = .y)))) %>%
   select(-assigned_link) 
 
-due_links <- read_xlsx(here::here("nopublish", "schedule.xlsx"), sheet = "schedule") %>%
+due_links <- read_xlsx(here::here("nopublish", "schedule_updated.xlsx"), sheet = "schedule") %>%
   select(Due, due_link) %>%
   drop_na() %>% 
   filter(str_detect(Due, "Homework")) %>%
@@ -57,7 +57,7 @@ due_links <- read_xlsx(here::here("nopublish", "schedule.xlsx"), sheet = "schedu
                          ~paste0("\ ", xfun::embed_file(path = here("homeworks", .x), text = .y)))) %>%
   select(-due_link) 
 
-sched_1 <- read_xlsx(here::here("nopublish", "schedule.xlsx"), sheet = "schedule") %>% 
+sched_1 <- read_xlsx(here::here("nopublish", "schedule_updated.xlsx"), sheet = "schedule") %>% 
   mutate(
     Reading = paste0(Reading, "(", reading_link, ")"),
     Slides = paste0(Slides, "(", slides_link, ")"),
@@ -157,7 +157,7 @@ tbl_fx(4)
 <br>
 <br>
 
-## Week 5: Mutating Joins
+## Week 5: RMarkdown
 
 ```{r}
 tbl_fx(5)
@@ -166,7 +166,7 @@ tbl_fx(5)
 <br>
 <br>
 
-## Week 6: RMarkdown
+## Week 6: GitHub
 
 ```{r}
 tbl_fx(6)
@@ -175,7 +175,7 @@ tbl_fx(6)
 <br>
 <br>
 
-## Week 7: GitHub
+## Week 7: Mutating Joins
 
 ```{r}
 tbl_fx(7)

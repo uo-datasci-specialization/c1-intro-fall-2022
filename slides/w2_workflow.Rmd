@@ -1290,5 +1290,5 @@ Produce a `hist`ogram of the `bill_length_mm ` variable
 ---
 
 ```{r, eval=FALSE}
-xaringanBuilder::build_pdf(here::here("slides", "w2_workflow.Rmd"), complex_slides = TRUE)
+renderthis::to_pdf(here::here("slides", "w2_workflow.Rmd"), complex_slides = TRUE)
 ```

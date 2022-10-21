@@ -339,16 +339,6 @@ college_grad_students
 
 ---
 
-# Use `select` to order columns
-
-```{r}
-college_grad_students %>%
-	select(major_code, grad_total, grad_sample_size, everything())
-```
-
-`everything()` is a helper verb that includes **all** column names
-
----
 # `select()` [helper](https://tidyselect.r-lib.org/reference/select_helpers.html) functions
 
 * `everything()`
@@ -368,6 +358,16 @@ reads <- read_csv(here("data", "Project_Reads_Scores.csv")) %>%
   clean_names()
 reads
 ```
+
+---
+# Use `select` to order columns
+
+```{r}
+college_grad_students %>%
+	select(major_code, grad_total, grad_sample_size, everything())
+```
+
+`everything()` is a helper verb that includes **all** column names
 
 ---
 # `starts_with()`
@@ -1186,6 +1186,6 @@ class: inverse, left, middle
 ---
 
 ```{r, echo=FALSE, eval=FALSE}
-xaringanBuilder::build_pdf(here::here("slides", "w4_dplyr.Rmd"), complex_slides = TRUE)
+renderthis::to_pdf(here::here("slides", "w4_dplyr.Rmd"), complex_slides = TRUE)
 ```
 

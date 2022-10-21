@@ -338,12 +338,6 @@ Think of `here()` simply as a function to print a path name
 First, install/load the package
 
 
-```r
-# In the console: 
-# install.packages("here")
-# Then, load the package
-library(here)
-```
 
 ---
 
@@ -354,9 +348,6 @@ Think of `here()` simply as a function to print a path
 Run this code in your project (console is fine)
 
 
-```r
-here()
-```
 
 --
 
@@ -371,10 +362,6 @@ Run this code in your project (console is fine)
 
 
 
-
-```r
-here()
-```
 
 ```
 ## [1] "C:/Users/jnese/Desktop/BRT/Teaching/1_Intro-Data-Science/c1-intro-fall-2022"
@@ -392,14 +379,8 @@ Think of `here()` simply as a function to print a path
 Run this code in your project (console is fine)
 
 
-```r
-here()
-```
 
 
-```r
-here("data")
-```
 
 --
 
@@ -414,14 +395,8 @@ Think of `here()` simply as a function to print a path name
 Run this code in your project (console is fine)
 
 
-```r
-here()
-```
 
 
-```r
-here("data")
-```
 
 **Question:** What was the difference in the output between these?
 
@@ -430,9 +405,6 @@ here("data")
 **Question:** What will the following produce?
 
 
-```r
-here("data", "ecls-k_samp.sav")
-```
 
 ---
 
@@ -485,22 +457,6 @@ Use `here()` to access data or any file in your project
 Try it!
 
 
-```r
-library(rio)
-
-# .sav
-eclsk &lt;- import(here("data", "ecls-k_samp.sav"), setclass = "tbl_df")
-
-# Use `as_tibble` instead of `setclass = "tbl_df"`
-
-# .txt
-fatality &lt;- import(here("data", "Fatality.txt")) %&gt;% 
-  as_tibble()
-
-#.csv
-exam1 &lt;- import(here("data", "Project_Reads_Scores.csv")) %&gt;% 
-  as_tibble()
-```
 
 ---
 
@@ -508,11 +464,6 @@ exam1 &lt;- import(here("data", "Project_Reads_Scores.csv")) %&gt;%
 
 #### Fatality.txt
 
-
-```r
-import("https://raw.githubusercontent.com/uo-datasci-specialization/c1-intro-fall-2022/master/data/Fatality.txt",
-       setclass = "tbl_df")
-```
 
 ```
 ## # A tibble: 336 x 10
@@ -565,13 +516,6 @@ Save data just as easily with `export()`
 .darkorange[file] = character string naming a file
 
 
-```r
-export(exam1, here("data", "exam1.sav"))
-
-export(exam1, here("data", "exam1.txt"))
-
-export(exam1, here("data", "exam1.dta"))
-```
 
 ---
 # `convert()`
@@ -631,11 +575,6 @@ In SPSS, numeric data are often encoded with labels
 ---
 
 
-```r
-eclsk %&gt;%
-  select(child_id, k_type:sex) %&gt;%
-  head()
-```
 
 --
 
@@ -654,21 +593,10 @@ eclsk %&gt;%
 
 ---
 
-```r
-eclsk %&gt;%
-  select(child_id, k_type:sex) %&gt;%
-  head()
-```
 
 ---
 
 
-```r
-eclsk %&gt;%
-* characterize() %&gt;%
-  select(child_id, k_type:sex) %&gt;%
-  head()
-```
 
 --
 
@@ -687,12 +615,6 @@ eclsk %&gt;%
 
 --
 
-
-```r
-eclsk %&gt;%
-  select(child_id, k_type:sex) %&gt;%
-  head()
-```
 
 ```
 ## # A tibble: 6 x 4
@@ -751,21 +673,6 @@ with the `here()` function
 Try it!
 
 
-```r
-library(tidyverse)
-
-# {haven} package
-eclsk &lt;- haven::read_sav(here("data", "ecls-k_samp.sav"))
-
-# read_table() for space separated data
-fatality &lt;- read_table(here("data", "Fatality.txt")) 
-
-#read_csv(), the one I most often use
-exam1 &lt;- read_csv(here("data", "Project_Reads_Scores.csv"))
-
-# read directly from the web, in this case a .csv
-web &lt;- read_csv("https://github.com/datalorax/ncme_18/raw/master/data/pubschls.csv")
-```
 
 ---
 # [`write_*()`](https://readr.tidyverse.org/reference/index.html)
@@ -810,9 +717,6 @@ Save data just as easily with `write_*()`
 `write_*(what, "where")`
 
 
-```r
-write_csv(exam1, here("data", "exam1.csv"))
-```
 
 ---
 class: inverse, left, middle
@@ -1020,52 +924,27 @@ Let's work within the "my_first_project" .RProj
 * Three options, choose one
 
 
-```r
-# rio::import()
-penguins &lt;- import(here("data", "Penguins.csv"), setclass = "tbl_df")
-
-penguins &lt;- import(here("data", "Penguins.csv"))
-
-# readr::read_csv()
-penguins &lt;- read_csv(here("data", "Penguins.csv")) 
-```
-
-```
-## Rows: 344 Columns: 8
-## -- Column specification --------------------------------------------------------
-## Delimiter: ","
-## chr (3): Species, Island, Sex
-## dbl (5): Bill Length (mm), Bill Depth (mm), Flipper Length (mm), Body Mass (...
-## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
-```
 
 ---
 
 # What do our data look like?
 
 
-```r
-penguins
-```
-
 ```
 ## # A tibble: 344 x 8
-##    Species Island    `Bill Length (mm)` Bill Depth~1 Flipp~2 Body ~3 Sex    Year
-##    &lt;chr&gt;   &lt;chr&gt;                  &lt;dbl&gt;        &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
-##  1 Adelie  Torgersen               39.1         18.7     181    3750 male   2007
-##  2 Adelie  Torgersen               39.5         17.4     186    3800 fema~  2007
-##  3 Adelie  Torgersen               40.3         18       195    3250 fema~  2007
-##  4 Adelie  Torgersen               NA           NA        NA      NA &lt;NA&gt;   2007
-##  5 Adelie  Torgersen               36.7         19.3     193    3450 fema~  2007
-##  6 Adelie  Torgersen               39.3         20.6     190    3650 male   2007
-##  7 Adelie  Torgersen               38.9         17.8     181    3625 fema~  2007
-##  8 Adelie  Torgersen               39.2         19.6     195    4675 male   2007
-##  9 Adelie  Torgersen               34.1         18.1     193    3475 &lt;NA&gt;   2007
-## 10 Adelie  Torgersen               42           20.2     190    4250 &lt;NA&gt;   2007
-## # ... with 334 more rows, and abbreviated variable names 1: `Bill Depth (mm)`,
-## #   2: `Flipper Length (mm)`, 3: `Body Mass (g)`
+##    Species Island    `Bill Length (mm)` `Bill Depth (mm)` `Flipper Length (mm)` `Body Mass (g)` Sex     Year
+##    &lt;chr&gt;   &lt;chr&gt;                  &lt;dbl&gt;             &lt;dbl&gt;                 &lt;dbl&gt;           &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;
+##  1 Adelie  Torgersen               39.1              18.7                   181            3750 male    2007
+##  2 Adelie  Torgersen               39.5              17.4                   186            3800 female  2007
+##  3 Adelie  Torgersen               40.3              18                     195            3250 female  2007
+##  4 Adelie  Torgersen               NA                NA                      NA              NA &lt;NA&gt;    2007
+##  5 Adelie  Torgersen               36.7              19.3                   193            3450 female  2007
+##  6 Adelie  Torgersen               39.3              20.6                   190            3650 male    2007
+##  7 Adelie  Torgersen               38.9              17.8                   181            3625 female  2007
+##  8 Adelie  Torgersen               39.2              19.6                   195            4675 male    2007
+##  9 Adelie  Torgersen               34.1              18.1                   193            3475 &lt;NA&gt;    2007
+## 10 Adelie  Torgersen               42                20.2                   190            4250 &lt;NA&gt;    2007
+## # ... with 334 more rows
 ```
 
 --
@@ -1073,9 +952,6 @@ penguins
 Or use `View()` to take a look at the full data in RStudio
 
 
-```r
-View(penguins)
-```
 
 
 ---
@@ -1083,15 +959,6 @@ View(penguins)
 # `clean_names()`
 
 
-```r
-# re-assign the "reads" object by reading the data in again
-penguins &lt;- read_csv(here("data", "Penguins.csv")) %&gt;% 
-  clean_names()
-
-# or just work with the existing "penguins" object
-penguins &lt;- penguins %&gt;% 
-  clean_names()
-```
 
 &lt;img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/janitor_clean_names.png" width="50%" height="50%" class="center"&gt;
 
@@ -1100,10 +967,6 @@ penguins &lt;- penguins %&gt;%
 ## Looking at the data `str`ucture
 
 `str`ucture 
-
-```r
-str(penguins)
-```
 
 ```
 ## spec_tbl_df [344 x 8] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
@@ -1136,10 +999,6 @@ str(penguins)
 `dim`ensions (rows `\(\times\)` columns)
 
 
-```r
-dim(penguins)
-```
-
 ```
 ## [1] 344   8
 ```
@@ -1147,16 +1006,8 @@ dim(penguins)
 --
 
 
-```r
-nrow(penguins)
-```
-
 ```
 ## [1] 344
-```
-
-```r
-ncol(penguins)
 ```
 
 ```
@@ -1170,29 +1021,20 @@ ncol(penguins)
 #### View the six first elements
 
 
-```r
-head(penguins)
-```
-
 ```
 ## # A tibble: 6 x 8
-##   species island    bill_length_mm bill_depth_mm flipper_l~1 body_~2 sex    year
-##   &lt;chr&gt;   &lt;chr&gt;              &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
-## 1 Adelie  Torgersen           39.1          18.7         181    3750 male   2007
-## 2 Adelie  Torgersen           39.5          17.4         186    3800 fema~  2007
-## 3 Adelie  Torgersen           40.3          18           195    3250 fema~  2007
-## 4 Adelie  Torgersen           NA            NA            NA      NA &lt;NA&gt;   2007
-## 5 Adelie  Torgersen           36.7          19.3         193    3450 fema~  2007
-## 6 Adelie  Torgersen           39.3          20.6         190    3650 male   2007
-## # ... with abbreviated variable names 1: flipper_length_mm, 2: body_mass_g
+##   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex     year
+##   &lt;chr&gt;   &lt;chr&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;
+## 1 Adelie  Torgersen           39.1          18.7               181        3750 male    2007
+## 2 Adelie  Torgersen           39.5          17.4               186        3800 female  2007
+## 3 Adelie  Torgersen           40.3          18                 195        3250 female  2007
+## 4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;    2007
+## 5 Adelie  Torgersen           36.7          19.3               193        3450 female  2007
+## 6 Adelie  Torgersen           39.3          20.6               190        3650 male    2007
 ```
 
 --
 
-
-```r
-head(penguins$flipper_length_mm)
-```
 
 ```
 ## [1] 181 186 195  NA 193 190
@@ -1203,11 +1045,6 @@ head(penguins$flipper_length_mm)
 ## Another cool package `{skimr}`
 
 
-```r
-library(skimr)
-
-skim(penguins)
-```
 
 .darkorange[[demo]]
 
@@ -1225,11 +1062,6 @@ skim(penguins)
 .pull-left[
  
 
-```r
-penguins %&gt;% 
-  count(species)
-```
-
 ```
 ## # A tibble: 3 x 2
 ##   species       n
@@ -1244,11 +1076,6 @@ penguins %&gt;%
 .pull-right[
 Or with `{janitor}`
 
-
-```r
-penguins %&gt;% 
-  tabyl(species)
-```
 
 ```
 ##    species   n   percent
@@ -1270,14 +1097,6 @@ Chaining arguments is **efficient** and **easy to read**
 
 --
 
-
-```r
-penguins %&gt;% 
-  filter(species == "Adelie",
-         bill_length_mm &gt; 40) %&gt;% 
-  select(island, bill_length_mm, body_mass_g) %&gt;% 
-  arrange(bill_length_mm) 
-```
 
 ```
 ## # A tibble: 51 x 3
@@ -1302,22 +1121,12 @@ penguins %&gt;%
 Chaining arguments is **efficient** and **easy to read**
 
 
-```r
-penguins %&gt;% 
-  filter(species == "Adelie",
-         bill_length_mm &gt; 40) %&gt;% 
-  select(island, bill_length_mm, body_mass_g) %&gt;% 
-  arrange(bill_length_mm) 
-```
 
 --
 
 Equivalent to:
 
 
-```r
-arrange(select(filter(penguins, species == "Adelie", bill_length_mm &gt; 40), island, bill_length_mm, body_mass_g), bill_length_mm)
-```
 
 ---
 
@@ -1333,11 +1142,6 @@ So you don't need to name the data each time
 So this:
 
 
-```r
-penguins %&gt;% 
-  count(sex)
-```
-
 ```
 ## # A tibble: 3 x 2
 ##   sex        n
@@ -1352,10 +1156,6 @@ penguins %&gt;%
 .pull-right[
 Is equivalent to this:
 
-
-```r
-count(penguins, sex)
-```
 
 ```
 ## # A tibble: 3 x 2
@@ -1418,69 +1218,42 @@ Select the `species` variable with `$`
 --
 
 
-```r
-penguins$species
 ```
-
-```
-##   [1] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##   [7] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [13] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [19] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [25] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [31] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [37] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [43] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [49] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [55] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [61] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [67] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [73] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [79] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [85] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [91] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-##  [97] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-## [103] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-## [109] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-## [115] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-## [121] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-## [127] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-## [133] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-## [139] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-## [145] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
-## [151] "Adelie"    "Adelie"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [157] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [163] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [169] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [175] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [181] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [187] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [193] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [199] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [205] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [211] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [217] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [223] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [229] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [235] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [241] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [247] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [253] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [259] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [265] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [271] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
-## [277] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [283] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [289] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [295] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [301] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [307] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [313] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [319] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [325] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [331] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [337] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
-## [343] "Chinstrap" "Chinstrap"
+##   [1] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+##  [11] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+##  [21] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+##  [31] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+##  [41] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+##  [51] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+##  [61] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+##  [71] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+##  [81] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+##  [91] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+## [101] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+## [111] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+## [121] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+## [131] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+## [141] "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"    "Adelie"   
+## [151] "Adelie"    "Adelie"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [161] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [171] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [181] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [191] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [201] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [211] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [221] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [231] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [241] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [251] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [261] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"   
+## [271] "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Gentoo"    "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
+## [281] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
+## [291] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
+## [301] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
+## [311] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
+## [321] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
+## [331] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
+## [341] "Chinstrap" "Chinstrap" "Chinstrap" "Chinstrap"
 ```
 
 ---
@@ -1488,22 +1261,14 @@ penguins$species
 ## Look at the `str`ucture of a variable
 
 
-```r
-str(penguins$species)
 ```
-
-```
-##  chr [1:344] "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" ...
+##  chr [1:344] "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" "Adelie" ...
 ```
 
 --
 
 ## Or and object
 
-
-```r
-str(penguins)
-```
 
 ```
 ## spec_tbl_df [344 x 8] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
@@ -1534,26 +1299,21 @@ str(penguins)
 ## Because `penguins` is a `tibble`
 
 
-```r
-penguins
-```
-
 ```
 ## # A tibble: 344 x 8
-##    species island    bill_length_mm bill_depth_mm flipper_~1 body_~2 sex    year
-##    &lt;chr&gt;   &lt;chr&gt;              &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;
-##  1 Adelie  Torgersen           39.1          18.7        181    3750 male   2007
-##  2 Adelie  Torgersen           39.5          17.4        186    3800 fema~  2007
-##  3 Adelie  Torgersen           40.3          18          195    3250 fema~  2007
-##  4 Adelie  Torgersen           NA            NA           NA      NA &lt;NA&gt;   2007
-##  5 Adelie  Torgersen           36.7          19.3        193    3450 fema~  2007
-##  6 Adelie  Torgersen           39.3          20.6        190    3650 male   2007
-##  7 Adelie  Torgersen           38.9          17.8        181    3625 fema~  2007
-##  8 Adelie  Torgersen           39.2          19.6        195    4675 male   2007
-##  9 Adelie  Torgersen           34.1          18.1        193    3475 &lt;NA&gt;   2007
-## 10 Adelie  Torgersen           42            20.2        190    4250 &lt;NA&gt;   2007
-## # ... with 334 more rows, and abbreviated variable names 1: flipper_length_mm,
-## #   2: body_mass_g
+##    species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex     year
+##    &lt;chr&gt;   &lt;chr&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;
+##  1 Adelie  Torgersen           39.1          18.7               181        3750 male    2007
+##  2 Adelie  Torgersen           39.5          17.4               186        3800 female  2007
+##  3 Adelie  Torgersen           40.3          18                 195        3250 female  2007
+##  4 Adelie  Torgersen           NA            NA                  NA          NA &lt;NA&gt;    2007
+##  5 Adelie  Torgersen           36.7          19.3               193        3450 female  2007
+##  6 Adelie  Torgersen           39.3          20.6               190        3650 male    2007
+##  7 Adelie  Torgersen           38.9          17.8               181        3625 female  2007
+##  8 Adelie  Torgersen           39.2          19.6               195        4675 male    2007
+##  9 Adelie  Torgersen           34.1          18.1               193        3475 &lt;NA&gt;    2007
+## 10 Adelie  Torgersen           42            20.2               190        4250 &lt;NA&gt;    2007
+## # ... with 334 more rows
 ```
 
 ---
@@ -1567,10 +1327,6 @@ penguins
 
 .pull-left[
 
-```r
-table(penguins$species)
-```
-
 ```
 ## 
 ##    Adelie Chinstrap    Gentoo 
@@ -1581,11 +1337,6 @@ table(penguins$species)
 --
 
 .pull-right[
-
-```r
-hist(penguins$body_mass_g)
-```
-
 ![](w2_workflow_files/figure-html/unnamed-chunk-43-1.png)&lt;!-- --&gt;
 ]
 
@@ -1600,9 +1351,6 @@ Produce a `hist`ogram of the `bill_length_mm ` variable
 ---
 
 
-```r
-xaringanBuilder::build_pdf(here::here("slides", "w2_workflow.Rmd"), complex_slides = TRUE)
-```
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
