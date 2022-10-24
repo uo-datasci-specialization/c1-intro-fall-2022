@@ -1225,17 +1225,14 @@ ggplot(summarized_mpg, aes(class)) +
 
 ---
 
-.pull-left[
 ```{r}
 mean_hmiles %>%
   ggplot(aes(class, mean_hwy)) + 
   geom_col()
 ```
-]
 
---
+---
 
-.pull-right[
 ```{r}
 mean_hmiles %>%
   mutate(class = factor(class,
@@ -1249,7 +1246,7 @@ mean_hmiles %>%
   ggplot(aes(class, mean_hwy)) + 
   geom_col()
 ```
-]
+
 
 ---
 # More bar plot options
