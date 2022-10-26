@@ -83,7 +83,7 @@ ggplot(gss_cat, aes(rincome)) +
 
 Use the code below to create a new data set - `gss_cat_new` - that redefines the `rincome` variable so that *Not applicable* is displayed first, followed by *No answer*, *Don't know*, *Refused*, and then each income category from lowest to highest. Once you've redefined the factor variable, re-produce the plot above by running the `ggplot` code at the bottom of the chunk. The plot should have *Not applicable* closest to the *y*-axis, then *No answer*, *Don't know*, etc.
 
-```{r redfine-factor, eval=FALSE}
+```{r redfine-factor}
 gss_cat_new <- gss_cat %>% 
   mutate(rincome = factor(rincome, levels = c()))
 
