@@ -348,8 +348,8 @@ a / b
 
 * Use single word: `chunk1`
 * Or use hyphen (`-`) to separate words: `chunk-1` 
-* Do **not** use spaces: `chunk 1`
-* Do **not** use underscore `chunk_1`
+* Do **not** use spaces: ~~`chunk 1`~~
+* Do **not** use underscore ~~`chunk_1`~~
 * Chunk names can only be used **once**
 
 --
@@ -947,21 +947,21 @@ bibliography: references.bib
 ---
 ```
 
-(3) Open a text file, save it as `references.bib` 
+(3) Open a text file in RStudio, save it as `references.bib` 
 
 ---
 # Citations in .Rmd .darkorange[[demo]]
 
 (4) Find the references to cite
   + You can copy/paste the citation into your .bib file using Google's cite option
-  + You can (and should!) cite the `R` packages you use
+  + You can (and should!) cite the `R` packages you use! `citation("package-name")` and `citation()` to cite `R`
 
 (5) Include a reference to the citation in your .Rmd file 
 
 (6) Include a page break so your citations are on a separate page (`\newpage`)
   + Note this is not APA format, but references are included automatically at the end of the document 
 
-(7) Add `# References` as the last line of your document to give it a title
+(7) Add the `# References` header as the last line of your document to give it a title
 
 (8) Render as PDF
 

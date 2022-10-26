@@ -1,7 +1,7 @@
 ---
 title: "R Markdown"
 subtitle: ""
-author: "Joe Nese<br><span style = 'font-size: 50%;'>University of Oregon<br>Fall 2021</span>"
+author: "Joe Nese<br><span style = 'font-size: 50%;'>University of Oregon<br>Fall 2022</span>"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -59,26 +59,10 @@ style_duo_accent(
 xaringanExtra::use_freezeframe()
 ```
 
-background-color: #CC79A7
-class: left, middle
-
-# Class Share!
-## Manuel
-
----
-### UO Libraries’ Statistical Consulting Service
-
-* The [UO Libraries’ Statistical Consulting Service](https://library.uoregon.edu/research-data-management/consultations), for graduate and undergraduate students, is available this term Monday - Friday 11 am - 4 pm on the first floor of the Knight Library (towards the back to the right of the main staircase). We are also available for scheduled to answer your questions and set up [appointments via our website](https://library.uoregon.edu/research-data-management/consultations). Anyone looking for help with statistics, statistical software like R, SPSS, Python, research design, GIS, git/GitHub and qualitative software such as Dedoose should get in touch with us using the links above. 
-
-* The library also offers free short [workshops](https://uoregon.libcal.com/calendar/dataservices/?cid=11979&t=d&d=0000-00-00&cal=11979,5245,11173,15812,6522&inc=0using) on topics such as R, Python, surveys, organizing your research data, qualitative research (Dedoose), creating a personal or lab website, using Zotero to manage your citations, and more. Our Friday lunch chats ([Coffee + Data & Code](https://uoregon.libcal.com/event/8301992) and [Book Club](https://uoregon.libcal.com/event/8304838)) offer a great opportunity to meet folks interested in data and code from across the university.
-
-* Saturday, Nov. 6th they are offering an all-day Python intensive.
-
----
 class: inverse, left, middle
 
 # R Markdown
-## Week 6
+## Week 5
 
 ---
 
@@ -252,6 +236,17 @@ knitr::include_graphics("images/rmd_11.png")
 ]
 
 ---
+# Headers
+
+\# Level 1
+<br>
+\#\# Level 2
+<br>
+\#\#\# Level 3
+
+* Great for organizing text **and** code
+
+---
 ## Table of Contents
 
 * Specify a table of contents in the YAML
@@ -265,7 +260,7 @@ knitr::include_graphics("images/rmd_11.png")
 ---
 output: 
   html_document:
-    toc: true
+    toc: true #<<
 ---
 ```
 
@@ -280,7 +275,7 @@ output:
 output: 
   html_document:
     toc: true
-    toc_depth: 5
+    toc_depth: 5 #<<
 ---
 ```
 
@@ -295,7 +290,7 @@ output:
   html_document:
     toc: true
     toc_depth: 5
-    toc_float: true
+    toc_float: true #<<
 ---
 ```
 
@@ -311,7 +306,7 @@ output:
     toc: true
     toc_depth: 5
     toc_float: true
-    code_folding: hide
+    code_folding: hide #<<
 ---
 ```
 
@@ -353,8 +348,8 @@ a / b
 
 * Use single word: `chunk1`
 * Or use hyphen (`-`) to separate words: `chunk-1` 
-* Do **not** use spaces: `chunk 1`
-* Do **not** use underscore `chunk_1`
+* Do **not** use spaces: ~~`chunk 1`~~
+* Do **not** use underscore ~~`chunk_1`~~
 * Chunk names can only be used **once**
 
 --
@@ -778,7 +773,7 @@ class: inverse, left, middle
 
 --
 
-* This is most useful when producing a report for somebody who doesn't use `R` and has no use for, or knowledge of, the code
+* `echo=FALSE` is most useful when producing a report for somebody who doesn't use `R` and has no use for, or knowledge of, the code
 
 * You can always override the global options within a particular chunk, e.g.
 
@@ -829,7 +824,11 @@ a <- 22
 b <- 7
 ```
 
+**script:**
+
 This is an example of inline code where I want to refer to the sum of a and b, which is \` `r knitr::inline_expr("a + b")` \`
+
+**output:**
 
 This is an example of inline code where I want to refer to the sum of a and b, which is `r a + b`
 
@@ -837,7 +836,7 @@ This is an example of inline code where I want to refer to the sum of a and b, w
 # Example
 
 .darkorange[[Bean Experiment .Rmd]]
-
+ 
 ---
 class: inverse, left, middle
 
@@ -948,21 +947,21 @@ bibliography: references.bib
 ---
 ```
 
-(3) Open a text file, save it as `references.bib` 
+(3) Open a text file in RStudio, save it as `references.bib` 
 
 ---
 # Citations in .Rmd .darkorange[[demo]]
 
 (4) Find the references to cite
   + You can copy/paste the citation into your .bib file using Google's cite option
-  + You can (and should!) cite the `R` packages you use
+  + You can (and should!) cite the `R` packages you use! `citation("package-name")` and `citation()` to cite `R`
 
 (5) Include a reference to the citation in your .Rmd file 
 
 (6) Include a page break so your citations are on a separate page (`\newpage`)
   + Note this is not APA format, but references are included automatically at the end of the document 
 
-(7) Add `# References` as the last line of your document to give it a title
+(7) Add the `# References` header as the last line of your document to give it a title
 
 (8) Render as PDF
 
@@ -1222,6 +1221,26 @@ m %>%
 ```
 
 ---
+
+# The kicker
+
+## [Quarto](https://quarto.org/docs/get-started/hello/rstudio.html)
+
+*"a multi-language, next-generation version of R Markdown from RStudio, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification."*
+
+-- 
+
+> "There is nothing permanent except change." - Heraclitus
+
+--
+
+> "Progress is impossible without change..." - George Bernard Shaw
+
+--
+
+> "If you don't like something, change it. If you can't change it, change your attitude." - Maya Angelou
+
+---
 class: inverse, left, middle
 
 # Next time
@@ -1230,7 +1249,7 @@ class: inverse, left, middle
 # Before next class
 
 * Homework
-  + **Homework 6**
+  + **Homework 5**
 * Reading
   + [Happy Git with R: 1, 9, 26-29](https://happygitwithr.com/big-picture.html)
 * Complete
@@ -1241,12 +1260,17 @@ class: inverse, left, middle
 ---
 class: inverse, left, middle
 
-# Homework 6
+# Homework 5
+
+---
+class: inverse, left, middle
+
+# Homework 4
 
 ---
 class: inverse, left, middle
 
 ```{r, echo=FALSE, eval=FALSE}
-xaringanBuilder::build_pdf(here::here("slides", "w6_rmarkdown.Rmd"), complex_slides = TRUE)
+renderthis::to_pdf(here::here("slides", "w5_rmarkdown.Rmd"), complex_slides = TRUE)
 ```
 
