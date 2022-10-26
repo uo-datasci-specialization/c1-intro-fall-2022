@@ -915,6 +915,34 @@ To include references in your .Rmd, you must:
 * For parenthesis around the citation, used brackets - `[@bibtexid]`
 
 ---
+# Citation Styles
+
+```{r echo=FALSE}
+tibble::tribble(
+  ~`Citation Style (using the tag)`,                                  ~Output,
+                        "@Briggs11",                "Briggs and Weeks (2011)",
+  "[see @Baldwin2014; @Caruso2000]", "(see Baldwin et al. 2014; Caruso 2000)",
+                  "[@Linn02, p. 9]",             "(Linn and Haug 2002, p. 9)",
+                  "[-@Goldhaber08]",                                  "(2008)"
+  ) %>% 
+  kable()
+
+```
+
+---
+## Also, cite `R`!
+
+```{r echo=TRUE, eval=FALSE}
+citation()
+```
+
+## And packages
+
+```{r echo=TRUE, eval=FALSE}
+citation("tidyverse")
+```
+
+---
 # Citations in .Rmd .darkorange[[demo]]
 
 1. Open a new Rmd document
@@ -1228,6 +1256,7 @@ m %>%
 
 *"a multi-language, next-generation version of R Markdown from RStudio, and includes dozens of new features and capabilities while at the same being able to render most existing Rmd files without modification."*
 
+
 -- 
 
 > "There is nothing permanent except change." - Heraclitus
@@ -1271,6 +1300,6 @@ class: inverse, left, middle
 class: inverse, left, middle
 
 ```{r, echo=FALSE, eval=FALSE}
-renderthis::to_pdf(here::here("slides", "w5_rmarkdown.Rmd"), complex_slides = TRUE)
+renderthis::to_pdf(here::here("slides", "w5_rmarkdown.html"), complex_slides = TRUE)
 ```
 
