@@ -308,7 +308,7 @@ tbl_fx(4)
 <br>
 <br>
 
-## Week 5: Mutating Joins
+## Week 5: RMarkdown
 
 ```{r}
 tbl_fx(5)
@@ -316,7 +316,7 @@ tbl_fx(5)
 <br>
 <br>
 
-## Week 6: RMarkdown
+## Week 6: GitHub
 
 ```{r}
 tbl_fx(6)
@@ -324,7 +324,7 @@ tbl_fx(6)
 <br>
 <br>
 
-## Week 7: GitHub
+## Week 7: Mutating Joins
 
 ```{r}
 tbl_fx(7)

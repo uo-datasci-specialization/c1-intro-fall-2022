@@ -48,7 +48,7 @@ dta <- read_xlsx(here::here("nopublish", "schedule_updated.xlsx"), sheet = "assi
   ) 
 ```
 
-As outlined in the [Weekly Schedule](https://uo-datasci-specialization.github.io/c1-intro-fall-2021/schedule.html), most class meetings will include a homework assignment. Supplemental Learning platforms (RStudio Primers, R-Bootcamp, and Codecademy) will also be used as additional homework assignments, and the course will conclude with a final project. More detail about each is provided below.
+As outlined in the [Weekly Schedule](https://uo-datasci-specialization.github.io/c1-intro-fall-2022/schedule.html), most class meetings will include a homework assignment. Supplemental Learning platforms (RStudio Primers, R-Bootcamp, and Codecademy) will also be used as additional homework assignments, and the course will conclude with a final project. More detail about each is provided below.
 <br>
 <br>
 
