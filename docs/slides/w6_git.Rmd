@@ -87,6 +87,13 @@ style_duo_accent(
 xaringanExtra::use_freezeframe()
 ```
 
+# Housekeeping
+
+- RStudio (the company) is now [Posit](https://posit.co/)
+- RStudio (the product) will remain (I think) RStudio
+
+---
+
 class: inverse, left, middle
 
 # git & GitHub
@@ -381,7 +388,7 @@ class: inverse, left, middle
 
 * Note the name you gave the project (folder)
 
-* *"Create a git repository"*
+* ✔️ *"Create a git repository"*
   + .bg-yellow[If ✔️: Don't add `.gitignore` in GiKraken or GitHub]
   + If 🚫: Add `.gitignore` in GitKraken **or** GitHub
 
