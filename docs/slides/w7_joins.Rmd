@@ -700,41 +700,6 @@ left_join(stu, seasonal_means_wide)
 ```
 
 ---
-# Another example
-
-* Often you want to add summary info to your dataset
-
-
-* You can do this easily with by piping arguments
-
---
-#### ECLS-K reminder
-
-```{r }
-ecls
-```
-
----
-# Compute group means
-
-```{r }
-ecls %>% 
-  group_by(school_id) %>% 
-  summarize(sch_pre_math = mean(T1MSCALE)) 
-```
-
----
-# Join within pipeline
-
-```{r print_ecls}
-ecls %>% 
-  group_by(school_id) %>% 
-  summarize(sch_pre_math = mean(T1MSCALE)) %>% 
-  left_join(ecls) %>% #<<
-  select(child_id, school_id:k_type) # Just for space
-```
-
----
 # Default join behavior 
 
 By default, the `_join` functions will use all columns with common names as keys
@@ -774,7 +739,10 @@ head(planes)
 Specify the variables with `by`
 
 ```{r join_flights2_planes}
+left_join(flights2, planes)
 left_join(flights2, planes, by = "tailnum")
+
+left_join(flights2, planes, by = "tailnum", suffix = c("_flights", "_planes"))
 ```
 
 ---
@@ -803,6 +771,8 @@ stu
 ## Join with mismatched key names
 
 ```{r join_name_mismatch}
+left_join(stu, schl)
+
 left_join(stu, schl, by = c("scid" = "school_id"))
 ```
 
