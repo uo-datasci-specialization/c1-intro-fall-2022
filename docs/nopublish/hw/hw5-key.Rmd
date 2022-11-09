@@ -1,5 +1,5 @@
 ---
-title: "Homework 6"
+title: "Homework 5"
 author: ""
 output:
   html_document:
@@ -11,7 +11,7 @@ output:
 
 ----
 
-#### Please submit Homework 6 as an .Rmd file **AND** as a rendered document (.pdf or .html)
+#### Please submit Homework 5 as an .Rmd file **AND** as a rendered document (.pdf or .html)
 
 ----
 
