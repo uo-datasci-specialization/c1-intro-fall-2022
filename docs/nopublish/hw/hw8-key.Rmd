@@ -1,5 +1,5 @@
 ---
-title: "Homework 5"
+title: "Homework 8"
 author: "Key"
 output: html_document
 ---
@@ -102,9 +102,9 @@ agg_tma_max <- student_tma_max %>%
   summarize(tma_mean = mean(score, na.rm = TRUE))
 ```
 
-### 6. Plot
+### 5. Plot
 
-6.1. Reproduce the following plot, using any theme and colors you want *except* for the defaults.
+5.1. Reproduce the following plot, using any theme and colors you want *except* for the defaults.
 
 ```{r}
 agg_tma_max %>%
