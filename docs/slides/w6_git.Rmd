@@ -397,50 +397,30 @@ class: inverse, left, middle
 
 ### GitKraken
 
-* Open a *.green[repo]*
+* Open 
 
-* Init
+* Open a *.green[repository]*
 
-* Local only
+* Select project folder
 
 ---
-# Open a repo (GitKraken)
+# 2. Open a repo (GitKraken)
 
 ```{r, echo=FALSE}
 knitr::include_graphics("images/gk_new.png")
 ```
 
 ---
-# Open a repo (GitKraken)
+#2. Open a repo (GitKraken)
 
 ```{r, echo=FALSE}
-knitr::include_graphics("images/gk_init.png")
+knitr::include_graphics("images/gk_open.png")
 ```
 
 ---
-# Open a repo (GitKraken)
+#2. Open a repo (GitKraken)
 
-* *"Name"*
-  + folder name where the Rproject lives
-* *"Initialize in"*
-  + Browse to the <u>parent</u> folder where your Rproject lives
-* *"Full path"*
-  + *"Full path"* = *"Initialize in"* + *"Name"*
-  + The full path should read to the path where your Rproject lives
-* *"Default branch name"*
-  + "main"
-* *".gitignore Template"*
-  + .bg-yellow[If already created one with your project, leave empty]
-  + If none yet created, choose "R"
-* *"License (optional)"*
-  + MIT License
-
----
-# Open a repo (GitKraken)
-
-```{r, echo=FALSE}
-knitr::include_graphics("images/gk_init2.png")
-```
+Select the folder where the Rproject lives
 
 ---
 # 3. Create new repo on GitHub
