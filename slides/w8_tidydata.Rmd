@@ -35,6 +35,7 @@ library(janitor)
 library(kableExtra)
 library(palmerpenguins)
 library(countdown)
+library(gt)
 
 ```
 
@@ -91,17 +92,6 @@ class: inverse, left, middle
 .darkorange[[view link]]
 
 ---
-# Assignment Updates
-
-### Change
-* .red[Final Project: Draft Data Script]: due 11/24 (Week 9)
-* .red[Final Project: Peer Review of Script]: due 12/1 (Week 10)
-
-### Same
-* .red[Final Project: Presentation]: due 12/1 (Week 10)
-* .red[Final Project: Paper]: due 12/8 (Week 11)
-
----
 ## How I feel about my `R` code sometimes
 
 ```{r, echo=FALSE, out.height='40%', out.width='40%', fig.align='center'}
@@ -118,8 +108,7 @@ knitr::include_graphics("images/mr_rodgers.png")
 **Learning Objectives**
 
 * Understand that the concept of tidy data is useful
-* Understand and be able to apply the `pivot_longer` and `pivot_wider` function
-
+* Understand and be able to apply the `pivot_longer()` and `pivot_wider()` functions
 
 ---
 
@@ -160,7 +149,7 @@ background-image: url("https://www.tidyverse.org/images/tidyverse-default.png")
 ---
 class: inverse, left, middle
 
-# .white[`{tidyr}`]
+# {tidyr}
 
 ---
 # `{dplyr}` vs `{tidyr}`
@@ -198,7 +187,7 @@ countdown(minutes = 1, seconds = 30, bottom = 0, warn_when = 30)
 ---
 # Data cleaning
 
-> “It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data (Dasu and Johnson 2003).”
+> “It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data (Dasu & Johnson, 2003).”
 > - Hadley Wickham (Tidy Data)
 
 <br>
@@ -346,7 +335,7 @@ background-size: contain
 ---
 class: inverse, left, middle
 
-# .white[`pivot_longer()`]
+# pivot_longer()
 
 ---
 # `pivot_longer()`
@@ -692,7 +681,9 @@ followed by a diagnosis category: .green["sp_", "sn_", "ep_", "rel_"]
 
 then .darkblue[sex], which in these data is limited to only .darkblue["m_"] or .darkblue["f_"]
 
-and finally an .pink[age range]
+and an .pink[age range]
+
+<u>and</u> these are separated by underscores `_` which is quite convenient, as we'll see
 ]
 
 --
@@ -735,7 +726,7 @@ who_r %>%
 
 * Takes looking at the [help documentation](https://tidyr.tidyverse.org/reference/pivot_longer.html) and the [vignette](https://tidyr.tidyverse.org/articles/pivot.html) - <u>a lot</u>
 
-* But you are rarely (never) gifted with tidy data
+* But you are ~~rarely~~ never gifted with tidy data
 
 ---
 # Declaring `cols` to `pivot_longer`
@@ -747,6 +738,8 @@ The important part is just being clear which columns should be part of the gathe
 All of the below are equivalent
 
 .pull-left[
+#### `relig_income` data
+
 ```{r, eval=FALSE}
 relig_income %>% 
   pivot_longer(
@@ -770,6 +763,8 @@ names(relig_income) %>%
 ]
 
 .pull-right[
+#### `who` data
+
 ```{r, eval=FALSE}
 names(who) %>% 
   pivot_longer(
@@ -788,8 +783,10 @@ names(who) %>%
 ---
 ## Let’s look at some education data
 
-Load the *exam1.csv* data from Canvas or from your cloned course repo
-  + You should start a new `R` script or Rmd
+Load the *exam1.csv* data from the course website or from your cloned course repo
+  + Did you clone the course repo? 
+
+Start a new `R` script or Rmd
 
 ```{r, eval=FALSE}
 library(tidyverse)
@@ -886,7 +883,7 @@ exam %>%
 ---
 # exam1 tidy
 
-One more step
+And another step
 
 ```{r, highlight.output=c(3)}
 exam %>% 
@@ -964,7 +961,7 @@ exam_tidy %>%
 ---
 # Why are tidy data useful?
 
-**Question**: How would we calculate the proportion of students responding correctly to each item?
+**Answer**: We `group_by(item)` and `summarize()`
 
 ```{r}
 exam_tidy %>% 
@@ -991,8 +988,8 @@ exam_tidy %>%
 ---
 # More data
 
-Load the *year-end_scores.csv* data from Canvas or from your cloned course repo
-  + Name the data *scores*
+Load the *year-end_scores.csv* data from the course website or from your cloned course repo
+  + Name the data `scores`
 
 ```{r, eval=FALSE}
 scores <- read_csv(here("data", "year-end_scores.csv"))
@@ -1006,7 +1003,7 @@ scores <- read_csv(here("data", "year-end_scores.csv"))
 # Talk as a class
 
 * Are these data tidy?
-  + If you wanted to summarize scores, or plot and use facet, what would you `group_by` or `facet` by?
+  + If you wanted to summarize scores, or plot and use facet, what would you use to `group_by()` or `facet_wrap()`?
 
 * What do we need to do to make these tidy?
   + What `pivot_longer()` arguments do we need?
@@ -1031,7 +1028,7 @@ scores_tidy <- scores %>%
 ---
 # Let's try another
 
-Load the *longitudinal_sim.csv* data from Canvas or the course repo
+Load the *longitudinal_sim.csv* data from course website or your cloned course repo
   + Name the data `sim`
   
 ```{r, eval=FALSE}
@@ -1046,13 +1043,14 @@ sim <- read_csv(here("data", "longitudinal_sim.csv"))
 # Talk with a neighbor
 
 * Are these data tidy?
-  + If you wanted to summarize scores, or plot and use facet, what would you `group_by` or `facet` by?
+  + If you wanted to summarize scores, or plot and use facet, what would you use to `group_by()` or `facet_wrap()`?
+
 * What do we need to do to make these tidy?
   + What `pivot_longer()` arguments do we need?
 
 --
 
-Work with your neighbor to tidy, name new data *tidy_sim* 
+Work with your neighbor to tidy, name new data `tidy_sim*`
 
 ```{r, echo=FALSE}
 countdown(minutes = 5, seconds = 0, bottom = 0, warn_when = 30)
@@ -1185,7 +1183,7 @@ hiv_tidy %>%
 ---
 class: inverse, left, middle
 
-# .white[`pivot_wider()`]
+# pivot_wider()
 
 ---
 # [`pivot_wider()`](https://tidyr.tidyverse.org/reference/pivot_wider.html)
@@ -1478,7 +1476,6 @@ class: inverse, left, middle
 
 * Final Project
   + .red[Final Project: Draft Data Script]
-  + *for sure this time*
 * Reading
   + [R4DS 15](https://r4ds.had.co.nz/factors.html)
 * Homework
@@ -1487,8 +1484,148 @@ class: inverse, left, middle
 ---
 class: inverse, left, middle
 
+# Final Project
+
+---
+# Final Project
+
+Final paper: R Markdown document
+
+**Final project must:**
+* Be fully reproducible
+  + This implies the data are open
+  
+* Be a collaborative project hosted on GitHub
+
+* Move data from its raw "messy" format to a tidy data format
+
+* Include at least two exploratory plots
+
+* Include at least summary statistics of the data in tables, although fitted models are also encouraged
+
+---
+# Final Project - Dates
+
+* **Week 9  (11/23)**: Data prep script due
+
+* **Week 10 (11/30)**:  Peer review due
+
+* **Week 10 (11/30)**:  Final project presentations
+
+* **Week 11 (12/7)**: Final Paper due
+
+---
+## Final Project - Data Prep Script
+
+* Expected to be a work in progress
+
+* Provided to your peers so they can learn from you as much as you can learn from their feedback
+
+**Peer Review**
+
+* Understand the purpose of the exercise
+
+* Conducted as a professional product
+
+* Should be **very** encouraging 
+
+* Zero tolerance policy for inappropriate comments
+
+---
+# Final Project – Presentation
+
+Groups are expected to present for approximately 25-30 minutes (split evenly among members). Group order randomly assigned. 
+
+Presentation cover the following:
+* Share your journey (everyone, at least for a minute or two)
+
+* Discuss challenges you had along the way
+
+* Celebrate your successes
+
+* Discuss challenges you are still facing
+
+* Discuss substantive findings
+
+* Show off your cool figures!
+
+* Discuss next `R` hurdle you want to address
+
+---
+## Final Project – Presentation Scoring Rubric
+
+```{r, echo=FALSE}
+
+read_csv(here("rubrics", "final-presentation_rubric.csv")) %>% 
+  mutate(across(everything(), ~ifelse(is.na(.), "", .))) %>% 
+  kable(caption = "<b>Final Presentation Rubric</b>") %>% 
+  kable_classic(full_width = F) %>%
+  row_spec(6, bold = TRUE) %>% 
+  kable_styling(font_size = 14, position = "left")
+```
+
+---
+# Final Project – Paper
+
+* R Markdown document
+  + Abstract, Intro, Methods, Results, Discussion, References
+  + Should be brief: 3,500 words max 
+  
+* No code displayed - think a manuscript being submitted for publication
+
+* Include at least 1 table
+
+* Include at least 2 plots
+
+* Should be fully open, reproducible, and housed on GitHub
+  + I should be able to clone your repository, open the R Studio Project, and reproduce the full manuscript (by knitting the R Markdown doc)
+
+---
+## Final Paper - Scoring Rubric
+
+```{r, echo=FALSE, fig.height=4}
+
+read_csv(here("rubrics", "final-project_rubric.csv")) %>% 
+  mutate(`Points Possible` = ifelse(is.na(`Points Possible`), "", `Points Possible`)) %>%
+  gt() %>% 
+  fmt_markdown(columns = everything()) %>%
+  tab_style(
+    style = list(
+      cell_text(weight = "bold")
+      ),
+    locations = cells_body(
+      columns = everything(),
+      rows = c(1, 8, 12, 20)
+    )
+  ) %>%
+  tab_style(
+    style = list(
+      cell_fill(color = "white")),
+    locations = cells_body(
+      columns = c(1, 2))
+  ) %>% 
+  tab_options(column_labels.background.color = "#0072B2",
+              table.font.size = px(10),
+              container.height = pct(80))
+```
+
+---
+# Final Project
+
+The following functions: 
+* `pivot_longer()`
+* `pivot_wider()`
+* `mutate()`
+* `select()`
+* `filter()`
+* `group_by()`
+* `summarize()`
+
+---
+class: inverse, left, middle
+
 ---
 
 ```{r, echo=FALSE, eval=FALSE}
-xaringanBuilder::build_pdf(here::here("slides", "w8_tidydata.Rmd"), complex_slides = TRUE)
+renderthis::to_pdf(here::here("slides", "w8_tidydata.html"), complex_slides = TRUE)
 ```
