@@ -89,6 +89,7 @@ class: inverse, left, middle
 * Final Project Review
 * Discuss factors and factor re-leveling
 * Walk through a *.green[pull request (PR)]*
+* Quick note on `ggplot()`: `group =` & `color/fill =` 
 
 
 **Overall Purpose**
